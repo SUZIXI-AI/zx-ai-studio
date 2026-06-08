@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width={{width}}, height={{height}}" />
+    <style>
+      * { box-sizing: border-box; }
+      html, body { margin: 0; width: {{width}}px; height: {{height}}px; overflow: hidden; background: #08111f; font-family: sans-serif; color: #f8fafc; }
+      .root { position: relative; width: 100%; height: 100%; overflow: hidden; background: radial-gradient(circle at 74% 18%, rgba(59,130,246,.24), transparent 30%), radial-gradient(circle at 18% 82%, rgba(20,184,166,.16), transparent 34%), linear-gradient(145deg,#08111f 0%,#0f172a 56%,#111827 100%); }
+      .grid { position:absolute; inset:0; opacity:.13; background-image: linear-gradient(rgba(148,163,184,.32) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,.32) 1px, transparent 1px); background-size: 56px 56px; mask-image: linear-gradient(180deg, transparent, #000 16%, #000 82%, transparent); }
+      .shell { position:absolute; inset:7% 6%; display:grid; grid-template-columns: .92fr 1.08fr; gap:4.8%; align-items:center; }
+      .copy { position:relative; z-index:2; display:grid; gap:28px; }
+      .chip { width:max-content; display:inline-flex; align-items:center; gap:10px; height:38px; padding:0 15px; border:1px solid rgba(125,211,252,.34); border-radius:999px; background:rgba(15,23,42,.62); color:#bae6fd; font-size:15px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+      .chip i { display:block; width:8px; height:8px; border-radius:50%; background:#38bdf8; box-shadow:0 0 0 5px rgba(56,189,248,.12); }
+      .title { margin:0; max-width: 11ch; font-size: clamp(58px, 7.6vw, 122px); line-height:.96; font-weight:900; letter-spacing:0; color:#fff; }
+      .body { margin:0; max-width: 680px; color:#cbd5e1; font-size: clamp(22px, 2.2vw, 34px); line-height:1.5; font-weight:650; }
+      .metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; max-width:640px; }
+      .metric { min-height:104px; padding:18px; border:1px solid rgba(226,232,240,.15); border-radius:20px; background:rgba(255,255,255,.055); box-shadow:0 14px 36px rgba(0,0,0,.22); backdrop-filter: blur(10px); }
+      .metric b { display:block; color:#67e8f9; font-size: clamp(24px,3vw,42px); line-height:1; font-weight:900; }
+      .metric span { display:block; margin-top:10px; color:#cbd5e1; font-size:14px; line-height:1.35; font-weight:700; }
+      .stage { position:relative; height:74%; min-height:520px; border:1px solid rgba(226,232,240,.16); border-radius:34px; background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.055)); box-shadow:0 30px 80px rgba(2,6,23,.38); overflow:hidden; }
+      .device { position:absolute; left:11%; top:8%; width:78%; height:76%; border-radius:32px; background:linear-gradient(145deg,#e0f2fe,#f8fafc 44%,#bfdbfe); box-shadow:0 24px 60px rgba(2,6,23,.28); overflow:hidden; }
+      .device img { width:100%; height:100%; object-fit:cover; display:block; }
+      .placeholder { width:100%; height:100%; display:grid; place-items:center; color:#0f172a; text-align:center; padding:8%; }
+      .placeholder strong { font-size: clamp(38px,5.2vw,76px); line-height:1; font-weight:900; }
+      .placeholder span { margin-top:18px; display:block; font-size: clamp(16px,2vw,28px); font-weight:800; color:#334155; }
+      .float-card { position:absolute; right:5%; bottom:8%; width:52%; padding:22px; border:1px solid rgba(255,255,255,.2); border-radius:22px; background:rgba(15,23,42,.72); box-shadow:0 18px 48px rgba(2,6,23,.38); backdrop-filter:blur(12px); }
+      .float-card strong { display:block; color:#fff; font-size: clamp(20px,2.2vw,34px); line-height:1.2; }
+      .bar { margin-top:18px; height:10px; border-radius:999px; background:rgba(148,163,184,.24); overflow:hidden; }
+      .bar i { display:block; width:78%; height:100%; border-radius:inherit; background:linear-gradient(90deg,#38bdf8,#22c55e); }
+      .cta { position:absolute; left:0; bottom:0; transform:translateY(52%); display:inline-flex; align-items:center; height:46px; padding:0 20px; border-radius:999px; background:#f8fafc; color:#0f172a; font-size:16px; font-weight:900; box-shadow:0 16px 32px rgba(0,0,0,.22); }
+      .caption-safe { position:absolute; left:7%; right:7%; bottom:390px; display:none; justify-content:center; pointer-events:none; }
+      @media (max-aspect-ratio: 3/4) { .shell { inset:5.5% 6% 0; grid-template-columns:1fr; grid-template-rows:auto 1fr; gap:2.2%; align-items:start; } .copy{gap:18px;padding-top:28px}.title{font-size:clamp(56px,12vw,116px);max-width:9ch}.body{font-size:clamp(21px,4vw,34px);max-width:none}.metrics{gap:10px}.metric{min-height:84px;padding:14px}.metric span{font-size:12px}.stage{height:100%;min-height:760px}.device{left:8%;top:7%;width:84%;height:72%}.float-card{width:72%;right:6%;bottom:12%}.cta{display:none} }
+    </style>
+  </head>
+  <body>
+    <div id="root" class="root" data-composition-id="main" data-start="0" data-duration="{{duration}}" data-width="{{width}}" data-height="{{height}}">
+      <div class="grid"></div>
+      <main class="shell">
+        <section class="copy" id="copy">
+          <div class="chip" id="chip"><i></i>Product Launch</div>
+          <h1 class="title" id="title">{{title}}</h1>
+          <p class="body" id="body">{{body}}</p>
+          <div class="metrics" id="metrics">
+            <div class="metric"><b>01</b><span>&#x6838;&#x5fc3;&#x5356;&#x70b9;</span></div>
+            <div class="metric"><b>3x</b><span>&#x6548;&#x7387;&#x63d0;&#x5347;</span></div>
+            <div class="metric"><b>Now</b><span>&#x9a6c;&#x4e0a;&#x4f53;&#x9a8c;</span></div>
+          </div>
+        </section>
+        <section class="stage" id="stage">
+          <div class="device" id="device">{{image_url}}<div class="placeholder"><div><strong>ZX AI</strong><span>{{title}}</span></div></div></div>
+          <div class="float-card" id="floatCard"><strong>&#x8ba9;&#x590d;&#x6742;&#x529f;&#x80fd;&#x4e00;&#x773c;&#x770b;&#x61c2;</strong><div class="bar"><i id="barFill"></i></div><div class="cta" id="cta">{{cta}}</div></div>
+        </section>
+      </main>
+    </div>
+    <script>
+      const imgPath = "{{image_url}}";
+      const device = document.getElementById("device");
+      if (imgPath) device.innerHTML = '<img src="' + imgPath + '" alt="asset">';
+      const easeOutCubic = x => 1 - Math.pow(1 - Math.max(0, Math.min(1, x)), 3);
+      const easeInOutCubic = x => { x = Math.max(0, Math.min(1, x)); return x < .5 ? 4*x*x*x : 1 - Math.pow(-2*x+2, 3)/2; };
+      function setIn(el, p, y, scale){ const e=easeOutCubic(p); el.style.opacity=String(Math.max(0,Math.min(1,p*1.4))); el.style.transform=`translateY(${(1-e)*y}px) scale(${scale+(1-scale)*e})`; }
+      function apply(t){
+        const d={{duration}}; const p=Math.max(0,Math.min(1,t/d));
+        setIn(chip, p*2.2, 24, .98); setIn(title, p*1.8-.08, 46, .96); setIn(body, p*1.7-.2, 34, .98); setIn(metrics, p*1.55-.34, 28, .98);
+        const se=easeOutCubic(p*1.4-.08); stage.style.opacity=String(Math.max(0,Math.min(1,p*1.7))); stage.style.transform=`translateX(${(1-se)*72}px) scale(${.94+se*.06})`;
+        const fe=easeOutCubic(p*1.6-.28); floatCard.style.opacity=String(Math.max(0,Math.min(1,(p-.18)*2.2))); floatCard.style.transform=`translateY(${(1-fe)*46}px)`;
+        barFill.style.width = (36 + easeInOutCubic(p) * 56).toFixed(1) + "%";
+      }
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = { _t:0, pause(){return this}, play(){return this}, seek(t){this._t=Number(t)||0; apply(this._t); return this}, totalTime(t){if(typeof t==='number')this.seek(t); return this._t}, time(){return this._t}, duration(){return {{duration}}}, getChildren(){return []} };
+      apply(0);
+    </script>
+  </body>
+</html>

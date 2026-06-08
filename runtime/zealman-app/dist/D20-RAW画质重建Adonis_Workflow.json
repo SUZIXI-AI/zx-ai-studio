@@ -1,0 +1,337 @@
+{
+  "118": {
+    "inputs": {
+      "image": "155d443821b50fddaecd10b51bb495f1.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "282": {
+    "inputs": {
+      "value": "uhdmanscale, fully reconstruct this entire image from cellphone quality to professional high resolution color raw quality.\n\nRemove halftone dot pattern. Apply descreen filter. Eliminate periodic grid noise. Eliminate repeating noise patterns and artifacts, remove uniform diagonal line texture patterns. Reconstruct low resolution high ISO noise areas with high resolution low ISO noise textures.\n\nApply full detail reconstruction to all areas: background, environment, surfaces, objects, clothing, and foreground elements — render everything sharp, textured, and high fidelity.\n\nSubject identity is locked: preserve exact facial geometry and body geometry, eye shape and color, nose and mouth shape, and expression.\n\nOn skin areas, remove color blotch artifacts, normalize tone uniformity, preserve natural pore and texture detail. On hair and body hair areas, separate smeared color artifacts, restore strand separation and texture. Outside the subject's face, freely reconstruct all texture and sharpness with no restrictions.\n\nDeblur and focus correction pass. Infer and reconstruct underlying detail from soft source: sharpen edge definition, recover eye detail, lip definition, and skin texture from motion blur.\n\nOutput as professional high resolution color camera RAW image."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Prompt"
+    }
+  },
+  "310": {
+    "inputs": {
+      "filename_prefix": "Adonis/Adonis_Output",
+      "images": [
+        "312",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "312": {
+    "inputs": {
+      "grain_intensity": 0.018,
+      "saturation_mix": 0.18,
+      "batch_size": 3,
+      "images": [
+        "378",
+        0
+      ]
+    },
+    "class_type": "FastFilmGrain",
+    "_meta": {
+      "title": "Add Film Grain"
+    }
+  },
+  "366": {
+    "inputs": {
+      "unet_name": "flux/flux-2-klein-9b-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "367": {
+    "inputs": {
+      "megapixels": 1.7,
+      "multiple_of": 16,
+      "resize_mode": "crop",
+      "upscale_method": "lanczos",
+      "image": [
+        "118",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixelsX",
+    "_meta": {
+      "title": "Scale Image to Total Pixels Adv"
+    }
+  },
+  "370": {
+    "inputs": {
+      "conditioning": [
+        "376",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "371": {
+    "inputs": {
+      "width": [
+        "367",
+        1
+      ],
+      "height": [
+        "367",
+        2
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "空Latent图像（Flux2）"
+    }
+  },
+  "372": {
+    "inputs": {
+      "pixels": [
+        "367",
+        0
+      ],
+      "vae": [
+        "384",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "373": {
+    "inputs": {
+      "conditioning": [
+        "376",
+        0
+      ],
+      "latent": [
+        "372",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "374": {
+    "inputs": {
+      "conditioning": [
+        "370",
+        0
+      ],
+      "latent": [
+        "372",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "376": {
+    "inputs": {
+      "text": [
+        "282",
+        0
+      ],
+      "clip": [
+        "386",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "377": {
+    "inputs": {
+      "noise_type_init": "laplacian",
+      "s_noise_init": 1,
+      "denoise_alt": 1,
+      "channelwise_cfg": false
+    },
+    "class_type": "SharkOptions_Beta",
+    "_meta": {
+      "title": "SharkOptions"
+    }
+  },
+  "378": {
+    "inputs": {
+      "samples": [
+        "381",
+        0
+      ],
+      "vae": [
+        "384",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "380": {
+    "inputs": {
+      "eta": 0.8,
+      "sampler_name": "exponential/res_2s",
+      "scheduler": "simple",
+      "steps": [
+        "385",
+        0
+      ],
+      "steps_to_run": 5,
+      "denoise": 1,
+      "cfg": 1,
+      "seed": [
+        "387",
+        0
+      ],
+      "sampler_mode": "standard",
+      "bongmath": true,
+      "model": [
+        "383",
+        0
+      ],
+      "positive": [
+        "373",
+        0
+      ],
+      "negative": [
+        "374",
+        0
+      ],
+      "latent_image": [
+        "371",
+        0
+      ],
+      "options": [
+        "377",
+        0
+      ]
+    },
+    "class_type": "ClownsharKSampler_Beta",
+    "_meta": {
+      "title": "ClownsharKSampler"
+    }
+  },
+  "381": {
+    "inputs": {
+      "eta": 0.8,
+      "sampler_name": "exponential/res_2s",
+      "scheduler": "simple",
+      "steps": [
+        "385",
+        0
+      ],
+      "steps_to_run": -1,
+      "denoise": 1,
+      "cfg": 1,
+      "seed": [
+        "387",
+        0
+      ],
+      "sampler_mode": "resample",
+      "bongmath": true,
+      "model": [
+        "382",
+        0
+      ],
+      "latent_image": [
+        "380",
+        0
+      ]
+    },
+    "class_type": "ClownsharKSampler_Beta",
+    "_meta": {
+      "title": "ClownsharKSampler"
+    }
+  },
+  "382": {
+    "inputs": {
+      "lora_name": "Flux/flux2klein_adonis_refine.safetensors",
+      "strength_model": 1,
+      "model": [
+        "366",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load Adonis Refine Model"
+    }
+  },
+  "383": {
+    "inputs": {
+      "lora_name": "Flux/flux2klein_adonis_base.safetensors",
+      "strength_model": 1,
+      "model": [
+        "366",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load Adonis Base Model"
+    }
+  },
+  "384": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "385": {
+    "inputs": {
+      "value": 9
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "Total Steps"
+    }
+  },
+  "386": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "387": {
+    "inputs": {
+      "seed": 0
+    },
+    "class_type": "easy seed",
+    "_meta": {
+      "title": "随机种"
+    }
+  }
+}

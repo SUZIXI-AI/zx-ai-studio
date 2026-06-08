@@ -1,0 +1,17 @@
+# wan2.2 图生视频模型配置
+name: wan2.2首尾帧/图生视频模型组合
+subtitle: 你需要下载下面模型才能开始，Comfyui左侧工作流菜单内有配套工作流
+group: modelgobg
+totalSize: 26.62
+
+models:
+  - name: wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+    displayName: wan2.2图生视频高噪 (13.31GB)
+    path: zealman/Wan_2.2/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+    size: 13.31
+    type: diffusion_models
+  - name: wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+    displayName: wan2.2图生视频低噪 (13.31GB)
+    path: zealman/Wan_2.2/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+    size: 13.31
+    type: diffusion_models

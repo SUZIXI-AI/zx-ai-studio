@@ -1,0 +1,23 @@
+diffusion_models:
+- id: qwen_image_edit_2511_fp8_e4m3fn
+  type: diffusion_models
+  displayName: qwen_image_edit_2511_fp8mixed.safetensors
+  fileName: qwen_image_edit_2511_fp8mixed.safetensors
+  downloadUrl: nahz202/Qwen-Image_ComfyUI/qwen_image_edit_2511_fp8mixed.safetensors
+  subfolder: qwen
+  size: 19.00GB
+text_encoders:
+- id: qwen_2_5_vl_7b_fp8_scaled
+  type: text_encoders
+  displayName: qwen_2.5_vl_7b_fp8_scaled.safetensors
+  fileName: qwen_2.5_vl_7b_fp8_scaled.safetensors
+  downloadUrl: zealman/nunchaku-tech/qwen_2.5_vl_7b_fp8_scaled.safetensors
+  size: 8.70GB
+combinations:
+- id: combo_group_h
+  name: 千问2511自由切换角度组合
+  subtitle: 同镜像内的2602-qwen-image-edit-2511-multiple-angles工作流
+  group: H
+  modelIds:
+  - qwen_image_edit_2511_fp8_e4m3fn
+  - qwen_2_5_vl_7b_fp8_scaled

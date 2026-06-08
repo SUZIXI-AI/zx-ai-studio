@@ -1,0 +1,45 @@
+# 快捷生成页面 B 组模型配置 - SmoothMix-V2图生视频组合
+# 对应工作流: Video/50.smoothMixWan22-v2图生视频.json
+#2025-10-14 15：50
+
+
+diffusion_models:
+- id: smoothmixwan2214bi2v_i2vv20high
+  type: diffusion_models
+  displayName: smoothMixWan2214BI2V_i2vV20High.safetensors
+  fileName: smoothMixWan2214BI2V_i2vV20High.safetensors
+  downloadUrl: zealman/Wan_2.2/smoothMixWan2214BI2V_i2vV20High.safetensors
+  subfolder: Wan
+  size: 13.5GB
+- id: smoothmixwan2214bi2v_i2vv20low
+  type: diffusion_models
+  displayName: smoothMixWan2214BI2V_i2vV20Low.safetensors
+  fileName: smoothMixWan2214BI2V_i2vV20Low.safetensors
+  downloadUrl: zealman/Wan_2.2/smoothMixWan2214BI2V_i2vV20Low.safetensors
+  subfolder: Wan
+  size: 13.5GB
+text_encoders:
+- id: umt5_xxl_fp8_e4m3fn_scaled
+  type: text_encoders
+  displayName: umt5_xxl_fp8_e4m3fn_scaled.safetensors
+  fileName: umt5_xxl_fp8_e4m3fn_scaled.safetensors
+  downloadUrl: zealman/Wan_2.2/umt5_xxl_fp8_e4m3fn_scaled.safetensors
+  size: 6.30GB
+loras:
+- id: lightx2v_i2v_14b_480p_cfg_step_distill_rank128_bf16
+  type: loras
+  displayName: lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16.safetensors
+  fileName: lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16.safetensors
+  downloadUrl: zealman/Wan_2.2/lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16.safetensors
+  subfolder: Lightx2v
+  size: 1.37GB
+combinations:
+- id: combo_group_b
+  name: SmoothMix-V2图生视频组合
+  subtitle: 同本镜像内Comfyui工作流中的50号工作流，带插帧最后输出为30帧，和一张尾帧图（可做下个视频的首帧）
+  group: B
+  modelIds:
+  - smoothmixwan2214bi2v_i2vv20high
+  - smoothmixwan2214bi2v_i2vv20low
+  - umt5_xxl_fp8_e4m3fn_scaled
+  - lightx2v_i2v_14b_480p_cfg_step_distill_rank128_bf16

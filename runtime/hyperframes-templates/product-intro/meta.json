@@ -1,0 +1,34 @@
+{
+  "id": "product-intro",
+  "name": "产品介绍",
+  "description": "适合产品功能演示、App/服务卖点说明和新品发布。建议做成高级科技/商务媒体风：深色或清爽背景、卖点卡片、数据徽章、产品视觉焦点和克制动效，避免灰色PPT。",
+  "duration_options": [
+    5,
+    12,
+    30,
+    60
+  ],
+  "aspect_options": [
+    "9:16",
+    "16:9",
+    "1:1"
+  ],
+  "fields": [
+    {
+      "key": "title",
+      "label": "标题",
+      "type": "text",
+      "required": true
+    },
+    {
+      "key": "subtitle",
+      "label": "副标题",
+      "type": "text"
+    },
+    {
+      "key": "image_url",
+      "label": "产品图",
+      "type": "image"
+    }
+  ]
+}

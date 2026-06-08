@@ -1,0 +1,289 @@
+{
+  "60": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "200:191",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "78": {
+    "inputs": {
+      "image": "0076EeHwly1hmxiu78w8wj30qo13zq9d.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "200:183": {
+    "inputs": {
+      "width": 1280,
+      "height": 720,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "200:184": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "200:185": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "200:186": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": [
+        "200:189",
+        0
+      ],
+      "background_color": "#000000",
+      "image": [
+        "78",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "200:187": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": [
+        "200:189",
+        0
+      ],
+      "background_color": "#000000"
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "200:189": {
+    "inputs": {
+      "value": 1280
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "200:190": {
+    "inputs": {
+      "seed": 44982217191719,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "200:193",
+        0
+      ],
+      "positive": [
+        "200:197",
+        0
+      ],
+      "negative": [
+        "200:194",
+        0
+      ],
+      "latent_image": [
+        "200:183",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "200:191": {
+    "inputs": {
+      "samples": [
+        "200:190",
+        0
+      ],
+      "vae": [
+        "200:185",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "200:192": {
+    "inputs": {
+      "shift": 3.1,
+      "model": [
+        "200:198",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "采样算法（AuraFlow）"
+    }
+  },
+  "200:193": {
+    "inputs": {
+      "strength": 1,
+      "model": [
+        "200:192",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "CFG归一化"
+    }
+  },
+  "200:194": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "200:184",
+        0
+      ],
+      "vae": [
+        "200:185",
+        0
+      ],
+      "image1": [
+        "200:186",
+        0
+      ],
+      "image2": [
+        "200:187",
+        0
+      ],
+      "image3": [
+        "200:188",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
+    }
+  },
+  "200:198": {
+    "inputs": {
+      "🔢 LoRA Count": "1",
+      "lora_count": 1,
+      "toggle_all": true,
+      "cpu_offload": "auto",
+      "enabled_1": true,
+      "lora_name_1": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
+      "lora_strength_1": 1,
+      "model": [
+        "200:199",
+        0
+      ]
+    },
+    "class_type": "NunchakuQwenImageLoraStackV3",
+    "_meta": {
+      "title": "Nunchaku Qwen Image LoRA Stack V3"
+    }
+  },
+  "200:199": {
+    "inputs": {
+      "model_name": "nunchaku_qwen_image_edit_2511_best_quality_int4.safetensors",
+      "cpu_offload": "auto",
+      "num_blocks_on_gpu": 60,
+      "use_pin_memory": "enable"
+    },
+    "class_type": "NunchakuQwenImageDiTLoader",
+    "_meta": {
+      "title": "Nunchaku Qwen-Image DiT Loader"
+    }
+  },
+  "200:197": {
+    "inputs": {
+      "prompt": "合并角色",
+      "clip": [
+        "200:184",
+        0
+      ],
+      "vae": [
+        "200:185",
+        0
+      ],
+      "image1": [
+        "200:186",
+        0
+      ],
+      "image2": [
+        "200:187",
+        0
+      ],
+      "image3": [
+        "200:188",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
+    }
+  },
+  "200:188": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": [
+        "200:189",
+        0
+      ],
+      "background_color": "#000000"
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  }
+}

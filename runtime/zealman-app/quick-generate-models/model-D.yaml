@@ -1,0 +1,48 @@
+diffusion_models:
+- id: wan2_2_i2v_high_noise_14b_fp8_scaled
+  type: diffusion_models
+  displayName: wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  fileName: wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  downloadUrl: zealman/Wan_2.2/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  subfolder: Wan
+  size: 13.00GB
+- id: wan2_2_i2v_low_noise_14b_fp8_scaled
+  type: diffusion_models
+  displayName: wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  fileName: wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  downloadUrl: zealman/Wan_2.2/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  subfolder: Wan
+  size: 13.00GB
+text_encoders:
+- id: umt5_xxl_enc_fp8_e4m3fn
+  type: text_encoders
+  displayName: umt5-xxl-enc-fp8_e4m3fn.safetensors
+  fileName: umt5-xxl-enc-fp8_e4m3fn.safetensors
+  downloadUrl: zealman/Wan_2.2/umt5-xxl-enc-fp8_e4m3fn.safetensors
+  size: 6.30GB
+loras:
+- id: lightx2v_t2v_14b_cfg_step_distill_v2_lora_rank128_
+  type: loras
+  displayName: lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors
+  fileName: lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors
+  downloadUrl: zealman/Wan_2.2/lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors
+  subfolder: Lightx2v
+  size: 1.20GB
+clip_vision:
+- id: open_clip_xlm_roberta_large_vit_huge_14_visual_fp1
+  type: clip_vision
+  displayName: open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.safetensors
+  fileName: open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.safetensors
+  downloadUrl: zealman/Wan_2.2/open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.safetensors
+  size: 1.17GB
+combinations:
+- id: combo_group_d
+  name: Wan 2.2 首尾帧转视频组合
+  subtitle: 同本镜像内Comfyui工作流中的11号工作流，帧率24
+  group: D
+  modelIds:
+  - wan2_2_i2v_high_noise_14b_fp8_scaled
+  - wan2_2_i2v_low_noise_14b_fp8_scaled
+  - umt5_xxl_enc_fp8_e4m3fn
+  - lightx2v_t2v_14b_cfg_step_distill_v2_lora_rank128_
+  - open_clip_xlm_roberta_large_vit_huge_14_visual_fp1

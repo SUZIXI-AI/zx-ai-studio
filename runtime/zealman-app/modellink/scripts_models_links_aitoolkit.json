@@ -1,0 +1,62 @@
+{
+  "flux": {
+    "flux1_dev": [
+      "dog/flux1/flux1-dev.safetensors"
+    ],
+    "text_encoder_2": [
+      "charslee013/Flux1-Dev-text_encoder_2/config.json",
+      "charslee013/Flux1-Dev-text_encoder_2/model-00001-of-00002.safetensors",
+      "charslee013/Flux1-Dev-text_encoder_2/model-00002-of-00002.safetensors",
+      "charslee013/Flux1-Dev-text_encoder_2/model.safetensors"
+    ],
+    "transformer": [
+      "charslee013/Flux.1-Dev-transformer/config.json",
+      "charslee013/Flux.1-Dev-transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+      "charslee013/Flux.1-Dev-transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+      "charslee013/Flux.1-Dev-transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+      "charslee013/Flux.1-Dev-transformer/diffusion_pytorch_model.safetensors"
+    ]
+  },
+  "kontext": {
+    "flux1_dev": [
+      "zealman/FLUX.1-Kontext-dev-train/flux1-kontext-dev.safetensors"
+    ],
+    "text_encoder_2": [
+      "zealman/FLUX.1-Kontext-dev-train/model-00001-of-00002.safetensors",
+      "zealman/FLUX.1-Kontext-dev-train/model-00002-of-00002.safetensors"
+    ],
+    "transformer": [
+      "zealman/FLUX.1-Kontext-dev-train/diffusion_pytorch_model-00001-of-00003.safetensors",
+      "zealman/FLUX.1-Kontext-dev-train/diffusion_pytorch_model-00002-of-00003.safetensors",
+      "zealman/FLUX.1-Kontext-dev-train/diffusion_pytorch_model-00003-of-00003.safetensors"
+    ]
+  },
+  "qwenimage": {
+    "text_encoder": [
+      "zealman/Qwen-Image-Edit-2509/model-00001-of-00004.safetensors",
+      "zealman/Qwen-Image-Edit-2509/model-00002-of-00004.safetensors",
+      "zealman/Qwen-Image-Edit-2509/model-00003-of-00004.safetensors",
+      "zealman/Qwen-Image-Edit-2509/model-00004-of-00004.safetensors",
+      "zealman/Qwen-Image/model-00001-of-00004.safetensors",
+      "zealman/Qwen-Image/model-00002-of-00004.safetensors",
+      "zealman/Qwen-Image/model-00003-of-00004.safetensors",
+      "zealman/Qwen-Image/model-00004-of-00004.safetensors"
+    ],
+    "transformer": [
+      "zealman/Qwen-Image-Edit-2509/diffusion_pytorch_model-00001-of-00005.safetensors",
+      "zealman/Qwen-Image-Edit-2509/diffusion_pytorch_model-00002-of-00005.safetensors",
+      "zealman/Qwen-Image-Edit-2509/diffusion_pytorch_model-00003-of-00005.safetensors",
+      "zealman/Qwen-Image-Edit-2509/diffusion_pytorch_model-00004-of-00005.safetensors",
+      "zealman/Qwen-Image-Edit-2509/diffusion_pytorch_model-00005-of-00005.safetensors",
+      "zealman/Qwen-Image/diffusion_pytorch_model-00001-of-00009.safetensors",
+      "zealman/Qwen-Image/diffusion_pytorch_model-00002-of-00009.safetensors",
+      "zealman/Qwen-Image/diffusion_pytorch_model-00003-of-00009.safetensors",
+      "zealman/Qwen-Image/diffusion_pytorch_model-00004-of-00009.safetensors",
+      "zealman/Qwen-Image/diffusion_pytorch_model-00005-of-00009.safetensors",
+      "zealman/Qwen-Image/diffusion_pytorch_model-00006-of-00009.safetensors",
+      "zealman/Qwen-Image/diffusion_pytorch_model-00007-of-00009.safetensors",
+      "zealman/Qwen-Image/diffusion_pytorch_model-00008-of-00009.safetensors",
+      "zealman/Qwen-Image/diffusion_pytorch_model-00009-of-00009.safetensors"
+    ]
+  }
+  }

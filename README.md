@@ -32,6 +32,13 @@ bash /root/zealman-app/scripts/autodl-start.sh
 /opt/hyperframes-cache
 ```
 
+本仓库的 `runtime/` 目录对应镜像里的 `/root` 运行内容：
+
+```text
+runtime/zealman-app -> /root/zealman-app
+runtime/hyperframes-templates -> /root/hyperframes-templates
+```
+
 用户运行数据写入：
 
 ```text
@@ -45,4 +52,3 @@ API Key 不写入镜像，用户创建实例后在设置页自行填写。
 ```text
 ZX AI Studio 是自研 AI 创作工作台，提供网页控制台、工作流管理、素材上传、API 配置、一键成片与作品管理。应用主界面运行在 6008 端口，本机 ComfyUI 作为工作流执行引擎运行在 6006 端口，一键成片服务运行在 6010 端口。用户创建实例后自行填写 API Key。
 ```
-

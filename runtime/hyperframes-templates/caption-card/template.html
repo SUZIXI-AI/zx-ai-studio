@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width={{width}}, height={{height}}" />
+    <style>
+      * { box-sizing: border-box; }
+      html, body { margin:0; width:{{width}}px; height:{{height}}px; overflow:hidden; background:#050816; font-family:sans-serif; color:#fff; }
+      .root { position:relative; width:100%; height:100%; overflow:hidden; background:radial-gradient(circle at 22% 18%, rgba(99,102,241,.26), transparent 30%), radial-gradient(circle at 82% 78%, rgba(14,165,233,.18), transparent 30%), linear-gradient(180deg,#050816,#0f172a 58%,#111827); display:grid; place-items:center; padding:8%; }
+      .grain { position:absolute; inset:0; opacity:.13; background-image:linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px); background-size:44px 44px; mask-image:radial-gradient(circle at center,#000,transparent 84%); }
+      .frame { position:relative; width:min(1200px,100%); min-height:58%; display:grid; align-content:center; justify-items:center; gap:34px; padding:7% 6%; border:1px solid rgba(226,232,240,.14); border-radius:34px; background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.045)); box-shadow:0 30px 90px rgba(2,6,23,.42); overflow:hidden; }
+      .frame:before { content:""; position:absolute; left:-18%; top:-30%; width:58%; height:70%; border-radius:50%; background:rgba(59,130,246,.16); filter:blur(50px); }
+      .kicker { position:relative; z-index:2; display:inline-flex; align-items:center; gap:10px; height:40px; padding:0 16px; border-radius:999px; border:1px solid rgba(191,219,254,.26); background:rgba(15,23,42,.64); color:#c7d2fe; font-size:15px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+      .kicker i { width:7px; height:7px; border-radius:50%; background:#60a5fa; }
+      .title { position:relative; z-index:2; margin:0; max-width:12ch; text-align:center; color:#fff; font-size:clamp(58px,8vw,124px); line-height:1.05; font-weight:950; letter-spacing:0; }
+      .title span { display:inline-block; }
+      .body { position:relative; z-index:2; margin:0; max-width:880px; text-align:center; color:#cbd5e1; font-size:clamp(24px,3.1vw,42px); line-height:1.48; font-weight:700; }
+      .caption-bar { position:absolute; left:7%; right:7%; bottom:390px; min-height:76px; display:flex; align-items:center; justify-content:center; padding:18px 28px; border:1px solid rgba(255,255,255,.14); border-radius:22px; background:rgba(2,6,23,.58); backdrop-filter:blur(12px); box-shadow:0 18px 48px rgba(2,6,23,.28); color:#fff; font-size:clamp(26px,4vw,46px); line-height:1.22; font-weight:900; text-align:center; }
+      .chips { position:absolute; top:8%; right:7%; display:grid; gap:10px; }
+      .chip { height:32px; display:inline-flex; align-items:center; justify-content:center; padding:0 12px; border-radius:999px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); color:#cbd5e1; font-size:12px; font-weight:850; }
+      @media (max-aspect-ratio:3/4) { .root{padding:7% 6% 0; place-items:start center}.frame{margin-top:12%;min-height:50%;padding:10% 6%;gap:28px}.title{font-size:clamp(64px,13vw,128px)}.body{font-size:clamp(24px,5vw,44px)}.caption-bar{bottom:400px;left:6%;right:6%;font-size:clamp(30px,6vw,52px)}.chips{top:5%;right:6%} }
+    </style>
+  </head>
+  <body>
+    <div id="root" class="root" data-composition-id="main" data-start="0" data-duration="{{duration}}" data-width="{{width}}" data-height="{{height}}">
+      <div class="grain"></div>
+      <div class="chips" id="chips"><span class="chip">KEY POINT</span><span class="chip">SAVE THIS</span></div>
+      <section class="frame" id="frame">
+        <div class="kicker" id="kicker"><i></i>&#x5b57;&#x5e55;&#x5361;&#x7247;</div>
+        <h1 class="title" id="title"><span id="titleText">{{title}}</span></h1>
+        <p class="body" id="body">{{body}}</p>
+      </section>
+      <div class="caption-bar" id="captionBar">{{title}}</div>
+    </div>
+    <script>
+      const easeOutCubic = x => 1 - Math.pow(1 - Math.max(0, Math.min(1, x)), 3);
+      const easeInOutCubic = x => { x=Math.max(0,Math.min(1,x)); return x<.5 ? 4*x*x*x : 1-Math.pow(-2*x+2,3)/2; };
+      function fadeIn(el,p,y,scale){ const e=easeOutCubic(p); el.style.opacity=String(Math.max(0,Math.min(1,p*1.3))); el.style.transform=`translateY(${(1-e)*y}px) scale(${scale+(1-scale)*e})`; }
+      function apply(t){
+        const d={{duration}}; const p=Math.max(0,Math.min(1,t/d));
+        const fe=easeOutCubic(p*1.35); frame.style.opacity=String(Math.max(0,Math.min(1,p*1.6))); frame.style.transform=`translateY(${(1-fe)*42}px) scale(${.96+fe*.04})`;
+        fadeIn(kicker,p*2.0,26,.98); fadeIn(titleText,p*1.65-.12,82,.94); fadeIn(body,p*1.55-.30,38,.98);
+        const cp=Math.max(0,Math.min(1,(p-.18)*2.8)); captionBar.style.opacity=String(cp); captionBar.style.transform=`translateY(${(1-easeOutCubic(cp))*34}px)`;
+        chips.style.opacity=String(Math.max(.35,Math.min(1,p*1.4))); chips.style.transform=`translateY(${Math.sin(p*Math.PI*2)*6}px)`;
+      }
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = { _t:0, pause(){return this}, play(){return this}, seek(t){this._t=Number(t)||0; apply(this._t); return this}, totalTime(t){if(typeof t==='number')this.seek(t); return this._t}, time(){return this._t}, duration(){return {{duration}}}, getChildren(){return []} };
+      apply(0);
+    </script>
+  </body>
+</html>

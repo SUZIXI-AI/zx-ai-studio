@@ -1,0 +1,694 @@
+{
+  "17": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "214:213",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "240": {
+    "inputs": {
+      "image": "mbzImEwvcQIWiVBKvAkdE1PWWNgYk2at.png",
+      "enabled": true
+    },
+    "class_type": "LoadImageWithSwitch",
+    "_meta": {
+      "title": "Load Image with Switch"
+    }
+  },
+  "277": {
+    "inputs": {
+      "image": "zhcnsuggestion_Real_3D_anime_character_Rinoa_Heartilly_from_Fin_9e18b254-2e7a-44b8-a0e9-067bb5225dac.png",
+      "enabled": true
+    },
+    "class_type": "LoadImageWithSwitch",
+    "_meta": {
+      "title": "Load Image with Switch"
+    }
+  },
+  "278": {
+    "inputs": {
+      "image": "2f3849397945344de0d95c371adbc2f2866cd13a3d5248bf40ed5f4bb575c17f.jpg",
+      "enabled": true
+    },
+    "class_type": "LoadImageWithSwitch",
+    "_meta": {
+      "title": "Load Image with Switch"
+    }
+  },
+  "279": {
+    "inputs": {
+      "image": "c40e7530de4aae3e5ab6c017f6110b6d.jpg",
+      "enabled": true
+    },
+    "class_type": "LoadImageWithSwitch",
+    "_meta": {
+      "title": "Load Image with Switch"
+    }
+  },
+  "548": {
+    "inputs": {
+      "image": "123.png",
+      "enabled": true
+    },
+    "class_type": "LoadImageWithSwitch",
+    "_meta": {
+      "title": "Load Image with Switch"
+    }
+  },
+  "235:227": {
+    "inputs": {
+      "unet_name": "flux/flux-2-klein-9b-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "235:229": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "235:230": {
+    "inputs": {
+      "width": [
+        "235:233",
+        0
+      ],
+      "height": [
+        "235:232",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "空Latent图像（Flux2）"
+    }
+  },
+  "235:232": {
+    "inputs": {
+      "value": 1080
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Height"
+    }
+  },
+  "235:233": {
+    "inputs": {
+      "value": 1920
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Width"
+    }
+  },
+  "235:228": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "235:231": {
+    "inputs": {
+      "text": "一幅精美的群像画作，描绘了五位各具特色的动漫风格女性，在阳光明媚的草原上共同摆拍。\n杰作，最高画质。\n\n参考图 0：留着带刘海的黑色长发，身穿黑色细带上衣，佩戴金色颈圈。\n参考图 1：留着深色长发，身穿蓝色低胸连衣裙。\n参考图 2：留着银色短波波头，身穿白色细肩带上衣，身材丰满。\n参考图 3：身穿黑白配色的修女/女仆装束。\n参考图 4：身穿传统的白色汉服，留着黑色长发并佩戴发饰。\n\n这五位女孩的五官特征、发型、服饰及体型均忠实还原自各自的参考图像；\n面部特征未发生混淆，姿态自然地站立在一起，动作各异，或凝视观者，或彼此互动；\n广袤翠绿的草原，湛蓝的天空，微风拂面，繁花点缀；采用电影级构图，细节锐利清晰，呈现典型的动漫风格。",
+      "clip": [
+        "235:229",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "285:237": {
+    "inputs": {
+      "pixels": [
+        "285:236",
+        0
+      ],
+      "vae": [
+        "235:228",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "285:238": {
+    "inputs": {
+      "conditioning": [
+        "235:231",
+        0
+      ],
+      "latent": [
+        "285:237",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "285:239": {
+    "inputs": {
+      "boolean": [
+        "240",
+        2
+      ],
+      "on_true": [
+        "285:238",
+        0
+      ],
+      "on_false": [
+        "235:231",
+        0
+      ]
+    },
+    "class_type": "Switch conditioning [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch conditioning"
+    }
+  },
+  "285:236": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1,
+      "resolution_steps": 1,
+      "image": [
+        "240",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "292:242": {
+    "inputs": {
+      "pixels": [
+        "292:245",
+        0
+      ],
+      "vae": [
+        "235:228",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "292:243": {
+    "inputs": {
+      "conditioning": [
+        "285:239",
+        0
+      ],
+      "latent": [
+        "292:242",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "292:244": {
+    "inputs": {
+      "boolean": [
+        "277",
+        2
+      ],
+      "on_true": [
+        "292:243",
+        0
+      ],
+      "on_false": [
+        "285:239",
+        0
+      ]
+    },
+    "class_type": "Switch conditioning [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch conditioning"
+    }
+  },
+  "292:245": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1,
+      "resolution_steps": 1,
+      "image": [
+        "277",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "286:247": {
+    "inputs": {
+      "pixels": [
+        "286:250",
+        0
+      ],
+      "vae": [
+        "235:228",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "286:248": {
+    "inputs": {
+      "conditioning": [
+        "292:244",
+        0
+      ],
+      "latent": [
+        "286:247",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "286:249": {
+    "inputs": {
+      "boolean": [
+        "279",
+        2
+      ],
+      "on_true": [
+        "286:248",
+        0
+      ],
+      "on_false": [
+        "292:244",
+        0
+      ]
+    },
+    "class_type": "Switch conditioning [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch conditioning"
+    }
+  },
+  "286:250": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1,
+      "resolution_steps": 1,
+      "image": [
+        "279",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "287:252": {
+    "inputs": {
+      "pixels": [
+        "287:255",
+        0
+      ],
+      "vae": [
+        "235:228",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "287:253": {
+    "inputs": {
+      "conditioning": [
+        "286:249",
+        0
+      ],
+      "latent": [
+        "287:252",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "287:254": {
+    "inputs": {
+      "boolean": [
+        "278",
+        2
+      ],
+      "on_true": [
+        "287:253",
+        0
+      ],
+      "on_false": [
+        "286:249",
+        0
+      ]
+    },
+    "class_type": "Switch conditioning [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch conditioning"
+    }
+  },
+  "287:255": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1,
+      "resolution_steps": 1,
+      "image": [
+        "278",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "291:261": {
+    "inputs": {
+      "pixels": [
+        "291:264",
+        0
+      ],
+      "vae": [
+        "235:228",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "291:262": {
+    "inputs": {
+      "conditioning": [
+        "287:254",
+        0
+      ],
+      "latent": [
+        "291:261",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "291:263": {
+    "inputs": {
+      "boolean": [
+        "548",
+        2
+      ],
+      "on_true": [
+        "291:262",
+        0
+      ],
+      "on_false": [
+        "287:254",
+        0
+      ]
+    },
+    "class_type": "Switch conditioning [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch conditioning"
+    }
+  },
+  "291:264": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1,
+      "resolution_steps": 1,
+      "image": [
+        "548",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "214:209": {
+    "inputs": {
+      "noise_seed": 162371817181909
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "214:212": {
+    "inputs": {
+      "noise": [
+        "214:209",
+        0
+      ],
+      "guider": [
+        "214:549",
+        0
+      ],
+      "sampler": [
+        "214:210",
+        0
+      ],
+      "sigmas": [
+        "214:211",
+        0
+      ],
+      "latent_image": [
+        "235:230",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "214:213": {
+    "inputs": {
+      "samples": [
+        "214:212",
+        0
+      ],
+      "vae": [
+        "235:228",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "214:549": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "235:227",
+        0
+      ],
+      "positive": [
+        "291:263",
+        0
+      ],
+      "negative": [
+        "291:263",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG引导器"
+    }
+  },
+  "214:211": {
+    "inputs": {
+      "steps": 4,
+      "width": [
+        "235:233",
+        0
+      ],
+      "height": [
+        "235:232",
+        0
+      ]
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2调度器"
+    }
+  },
+  "214:210": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "_api_config": {
+    "customLabels": {
+      "17:filename_prefix": "文件名前缀",
+      "240:image": "上传图片 (节点 240)",
+      "240:enabled": "enabled (节点 240)",
+      "277:image": "上传图片 (节点 277)",
+      "277:enabled": "enabled (节点 277)",
+      "278:image": "上传图片 (节点 278)",
+      "278:enabled": "enabled (节点 278)",
+      "279:image": "上传图片 (节点 279)",
+      "279:enabled": "enabled (节点 279)",
+      "548:image": "上传图片 (节点 548)",
+      "548:enabled": "enabled (节点 548)",
+      "235:227:weight_dtype": "weight_dtype (节点 235:227)",
+      "235:229:type": "type (节点 235:229)",
+      "235:229:device": "device (节点 235:229)",
+      "235:230:batch_size": "批次大小",
+      "235:232:value": "value (节点 235:232)",
+      "235:233:value": "value (节点 235:233)",
+      "235:231:text": "提示词 (节点 235:231)",
+      "285:236:upscale_method": "upscale_method (节点 285:236)",
+      "285:236:megapixels": "megapixels (节点 285:236)",
+      "285:236:resolution_steps": "resolution_steps (节点 285:236)",
+      "292:245:upscale_method": "upscale_method (节点 292:245)",
+      "292:245:megapixels": "megapixels (节点 292:245)",
+      "292:245:resolution_steps": "resolution_steps (节点 292:245)",
+      "286:250:upscale_method": "upscale_method (节点 286:250)",
+      "286:250:megapixels": "megapixels (节点 286:250)",
+      "286:250:resolution_steps": "resolution_steps (节点 286:250)",
+      "287:255:upscale_method": "upscale_method (节点 287:255)",
+      "287:255:megapixels": "megapixels (节点 287:255)",
+      "287:255:resolution_steps": "resolution_steps (节点 287:255)",
+      "291:264:upscale_method": "upscale_method (节点 291:264)",
+      "291:264:megapixels": "megapixels (节点 291:264)",
+      "291:264:resolution_steps": "resolution_steps (节点 291:264)",
+      "214:209:noise_seed": "noise_seed (节点 214:209)",
+      "214:549:cfg": "CFG Scale",
+      "214:211:steps": "迭代步数"
+    },
+    "enabledParams": {
+      "17:filename_prefix": false,
+      "240:image": true,
+      "240:enabled": true,
+      "277:image": true,
+      "277:enabled": true,
+      "278:image": true,
+      "278:enabled": true,
+      "279:image": true,
+      "279:enabled": true,
+      "548:image": true,
+      "548:enabled": true,
+      "235:227:weight_dtype": false,
+      "235:229:type": false,
+      "235:229:device": false,
+      "235:230:batch_size": false,
+      "235:232:value": false,
+      "235:233:value": false,
+      "235:231:text": true,
+      "285:236:upscale_method": false,
+      "285:236:megapixels": false,
+      "285:236:resolution_steps": false,
+      "292:245:upscale_method": false,
+      "292:245:megapixels": false,
+      "292:245:resolution_steps": false,
+      "286:250:upscale_method": false,
+      "286:250:megapixels": false,
+      "286:250:resolution_steps": false,
+      "287:255:upscale_method": false,
+      "287:255:megapixels": false,
+      "287:255:resolution_steps": false,
+      "291:264:upscale_method": false,
+      "291:264:megapixels": false,
+      "291:264:resolution_steps": false,
+      "214:209:noise_seed": false,
+      "214:549:cfg": false,
+      "214:211:steps": false
+    },
+    "formValues": {
+      "17:filename_prefix": "ComfyUI",
+      "240:image": {},
+      "240:enabled": true,
+      "277:image": {},
+      "277:enabled": true,
+      "278:image": {},
+      "278:enabled": true,
+      "279:image": null,
+      "279:enabled": true,
+      "548:image": null,
+      "548:enabled": true,
+      "235:227:weight_dtype": "default",
+      "235:229:type": "flux2",
+      "235:229:device": "default",
+      "235:230:batch_size": 1,
+      "235:232:value": 1080,
+      "235:233:value": 1920,
+      "235:231:text": "将参考图中三个角色合并在一张图上",
+      "285:236:upscale_method": "lanczos",
+      "285:236:megapixels": 1,
+      "285:236:resolution_steps": 1,
+      "292:245:upscale_method": "lanczos",
+      "292:245:megapixels": 1,
+      "292:245:resolution_steps": 1,
+      "286:250:upscale_method": "lanczos",
+      "286:250:megapixels": 1,
+      "286:250:resolution_steps": 1,
+      "287:255:upscale_method": "lanczos",
+      "287:255:megapixels": 1,
+      "287:255:resolution_steps": 1,
+      "291:264:upscale_method": "lanczos",
+      "291:264:megapixels": 1,
+      "291:264:resolution_steps": 1,
+      "214:209:noise_seed": 162371817181909,
+      "214:549:cfg": 1,
+      "214:211:steps": 4
+    }
+  }
+}

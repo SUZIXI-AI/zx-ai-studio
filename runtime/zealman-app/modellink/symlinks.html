@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZX AUTODL 软链接模型大全 - ComfyUI 模型软链接配置管理工具">
+    <meta property="og:title" content="ZX AUTODL 软链接模型大全">
+    <meta property="og:description" content="ZX AUTODL 软链接模型大全 - ComfyUI 模型软链接配置管理工具">
+    <meta property="og:type" content="website">
+    <title>ZX ComfyUI 模型软链接</title>
+    <link rel="icon" href="/zx-ai-logo.svg?v=1779059399773" type="image/svg+xml" sizes="any" />
+
+
+<!-- 引入独立的 CSS 文件 -->
+    <link rel="stylesheet" href="symlinks.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 左侧 Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>🔗 ZX ComfyUI 模型</h1>
+                <p class="sidebar-subtitle">软链接配置</p>
+            </div>
+            
+            <!-- 搜索框 -->
+            <div class="sidebar-search">
+                <div class="search-input-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-input" id="searchInput" placeholder="搜索分类或模型..." autocomplete="off">
+                    <button class="search-clear" id="searchClear">✕</button>
+                </div>
+            </div>
+            
+            <!-- 分类导航列表 -->
+            <nav class="sidebar-nav" id="categoryNavList">
+                <!-- 导航组将由 JS 动态插入到这里 -->
+            </nav>
+            
+        </aside>
+        
+        <!-- 移动端菜单按钮 -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="切换菜单">
+            <span class="menu-icon">☰</span>
+        </button>
+        
+        <!-- 移动端遮罩层 -->
+        <div class="mobile-overlay" id="mobileOverlay"></div>
+        
+        <!-- 右侧主内容区 -->
+        <main class="main-content">
+            <div class="content-header">
+                <div class="content-title-wrapper">
+                    <h2 class="content-title" id="contentTitle">ComfyUI 模型软链接使用</h2>
+                    <p class="content-subtitle" id="contentSubtitle">了解如何使用软链接来管理模型文件</p>
+                </div>
+            </div>
+            
+            <div class="content-body" id="contentBody">
+                <div class="no-results" id="noResults">ZX AUTODL 软链接模型大全</div>
+                
+                <!-- 默认介绍页面 -->
+                <div class="intro-page" id="introPage">
+                    <div class="intro-content">
+                        <h1 class="intro-title">AUTODL 应用平台全面使用软链接模型</h1>
+                        <p class="intro-description">让您方便的制作镜像，不再因为模型占用体积大和下载速度慢困扰。<br>如果有其他已经上传您需要的模型，那么您也可以直接在公共模型中找到来使用</p>
+                        
+                        <h2 class="intro-section-title">ComfyUI 模型软链接使用</h2>
+                        
+                        <h3 class="intro-subtitle">什么是软链接？</h3>
+                        <p class="intro-text">软链接是 Linux/Unix 系统中的一种特殊文件，它指向另一个文件或目录。类似于 Windows 系统中的快捷方式。</p>
+                        
+                        <h3 class="intro-subtitle">怎么在 ComfyUI 中使用软链接？</h3>
+                        <p class="intro-text">我们只要在 ComfyUI 的模型目录创建好软链接快捷方式，ComfyUI 则可以直接使用该模型</p>
+                        
+                        <div class="intro-code-block">
+                            <pre><code>mkdir -p &lt;创建要放的目标目录&gt;
+ln -s &lt;自己上传或者从公共模型库获得的链接&gt; &lt;要放的目标目录&gt;</code></pre>
+                        </div>
+                        
+                        <p class="intro-text"><strong>示例：</strong></p>
+                        <p class="intro-text">将 <code class="intro-inline-code">flux1-dev-fp8.safetensors</code> 放在该目录 <code class="intro-inline-code">/root/ComfyUI/models/checkpoints/</code></p>
+                        <p class="intro-text">当我上传或者从公共模型库可以搜索到 <code class="intro-inline-code">flux1-dev-fp8.safetensors</code> 对应的链接代码是 <code class="intro-inline-code">/.autodl/23/73/8c/23738c26b548113ea2d392abd91d3fd0</code>，那么我们就可以直接在终端运行这个命令：</p>
+                        
+                        <div class="intro-code-block">
+                            <pre><code>mkdir -p /root/ComfyUI/models/checkpoints/
+ln -s /.autodl/23/73/8c/23738c26b548113ea2d392abd91d3fd0 /root/ComfyUI/models/checkpoints/flux1-dev-fp8.safetensors</code></pre>
+                        </div>
+                        
+                        <p class="intro-text">然后你就可以看到 <code class="intro-inline-code">/root/ComfyUI/models/checkpoints/flux1-dev-fp8.safetensors</code> 文件存在，但是占用很少每个占50b。</p>
+                        
+                        <h2 class="intro-section-title">ComfyUI 官方 FLUX2 模型</h2>
+                        
+                        <div class="intro-code-block">
+                            <pre><code>mkdir -p /root/ComfyUI/models/diffusion_models/flux/
+ln -s /.autodl/Comfy-Org/flux2-dev/split_files/diffusion_models/flux2_dev_fp8mixed.safetensors /root/ComfyUI/models/diffusion_models/flux/flux2_dev_fp8mixed.safetensors
+ln -s /.autodl/Comfy-Org/flux2-dev/split_files/text_encoders/mistral_3_small_flux2_fp8.safetensors /root/ComfyUI/models/text_encoders/mistral_3_small_flux2_fp8.safetensors
+ln -s /.autodl/Comfy-Org/flux2-dev/split_files/text_encoders/mistral_3_small_flux2_bf16.safetensors /root/ComfyUI/models/text_encoders/mistral_3_small_flux2_bf16.safetensors
+ln -s /.autodl/Comfy-Org/flux2-dev/split_files/vae/flux2-vae.safetensors /root/ComfyUI/models/vae/flux2-vae.safetensors</code></pre>
+                        </div>
+                        <h2 class="intro-section-title">Z image turbo 模型</h2>
+                        
+                        <div class="intro-code-block">
+                            <pre><code>
+ln -s /.autodl/Comfy-Org/z_image_turbo/split_files/diffusion_models/z_image_turbo_bf16.safetensors /root/ComfyUI/models/diffusion_models/z_image_turbo_bf16.safetensors
+ln -s /.autodl/bstungnguyen/Flux/vae/diffusion_pytorch_model.safetensors /root/ComfyUI/models/vae/z_image_vae.safetensors
+ln -s /.autodl/Comfy-Org/z_image_turbo/split_files/text_encoders/qwen_3_4b.safetensors /root/ComfyUI/models/text_encoders/qwen_3_4b.safetensors</code></pre>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- 所有分类内容将动态加载到这里 -->
+                <div class="categories-container" id="categoriesContainer">
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- 引入独立的 JS 文件，并使用 defer 确保 DOM 加载后再执行 -->
+    <script src="symlinks.js" defer></script>
+</body>
+</html>

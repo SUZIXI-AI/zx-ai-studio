@@ -1,0 +1,477 @@
+[
+    {
+        "prompt": "A photo-realistic portrait of a young ancient Asian man with long black hair, wearing traditional Hanfu robes in muted gray tones. The man is standing in the middle of the image, with his upper body facing the viewer. He has a calm, neutral expression and is looking directly at the camera. His long straight black hair is neatly tied back with a simple ancient hairpiece, with a few strands framing his face. The background is softly blurred, appearing to be an outdoor ancient garden setting with trees, greenery, and subtle traditional architectural elements. The lighting is soft and natural, highlighting his refined facial features, the smooth texture of his hair, and the layered fabric of his robes. The image has a serene, elegant, and contemplative atmosphere, with the man's body slightly angled toward the left side of the frame.",
+        "images": [
+            "/output/zimage_1778602437_0f851bb675.png"
+        ],
+        "seed": 259931263295563,
+        "timestamp": 1778602437.4243016,
+        "type": "zimage",
+        "params": {},
+        "task_id": "8"
+    },
+    {
+        "prompt": "A photo-realistic portrait of a young ancient Asian man with long black hair, wearing traditional Hanfu robes in muted gray tones. The man is standing in the middle of the image, with his upper body facing the viewer. He has a calm, neutral expression and is looking directly at the camera. His long straight black hair is neatly tied back with a simple ancient hairpiece, with a few strands framing his face. The background is softly blurred, appearing to be an outdoor ancient garden setting with trees, greenery, and subtle traditional architectural elements. The lighting is soft and natural, highlighting his refined facial features, the smooth texture of his hair, and the layered fabric of his robes. The image has a serene, elegant, and contemplative atmosphere, with the man's body slightly angled toward the left side of the frame.",
+        "images": [
+            "/output/zimage_1778602411_bfa37680d6.png"
+        ],
+        "seed": 71136298276585,
+        "timestamp": 1778602411.5270808,
+        "type": "zimage",
+        "params": {},
+        "task_id": "7"
+    },
+    {
+        "prompt": "A photo-realistic portrait of a young Asian man with short black hair, wearing a gray cardigan over a gray t-shirt. The man is standing in the middle of the image, with his upper body facing the viewer. He has a neutral expression and is looking directly at the camera. His short, neat black hair frames his face naturally. The background is blurred, but it appears to be an outdoor setting with trees and greenery. The lighting is soft and natural, highlighting his facial features and the texture of his hair. The image has a serene and contemplative atmosphere, with the man's body slightly angled towards the left side of the frame.",
+        "images": [
+            "/output/zimage_1778594905_3f86b404ae.png"
+        ],
+        "seed": 229847930269678,
+        "timestamp": 1778594905.7181208,
+        "type": "zimage",
+        "params": {},
+        "task_id": "6"
+    },
+    {
+        "prompt": "合并人物在一个画面中",
+        "images": [
+            "/output/klein_1778594759_58d3de21bc.png"
+        ],
+        "seed": 648793743948200,
+        "timestamp": 1778594759.5259883,
+        "type": "klein",
+        "params": {
+            "158": {
+                "noise_seed": 812203
+            },
+            "168": {
+                "text": "合并人物在一个画面中"
+            },
+            "270": {
+                "image": "zimage_1778427145_5013eeb7b1.png"
+            },
+            "278": {
+                "image": "ai_ref_9a45f136e697.png"
+            },
+            "292": {
+                "image": ""
+            },
+            "313": {
+                "value": true
+            },
+            "314": {
+                "value": false
+            }
+        },
+        "task_id": "5"
+    },
+    {
+        "prompt": "合并人物在一个画面中",
+        "images": [
+            "/output/klein_1778594746_7fb089d6bf.png"
+        ],
+        "seed": 300705712919425,
+        "timestamp": 1778594746.184645,
+        "type": "klein",
+        "params": {
+            "158": {
+                "noise_seed": 245452
+            },
+            "168": {
+                "text": "合并人物在一个画面中"
+            },
+            "270": {
+                "image": "zimage_1778427145_5013eeb7b1.png"
+            },
+            "278": {
+                "image": "ai_ref_9a45f136e697.png"
+            },
+            "292": {
+                "image": ""
+            },
+            "313": {
+                "value": true
+            },
+            "314": {
+                "value": false
+            }
+        },
+        "task_id": "4"
+    },
+    {
+        "prompt": "a green tree",
+        "images": [
+            "/output/zimage_1778594424_4ac585a0cb.png"
+        ],
+        "seed": 692436036551289,
+        "timestamp": 1778594424.6518834,
+        "type": "zimage",
+        "params": {},
+        "task_id": "3"
+    },
+    {
+        "prompt": "a red apple",
+        "images": [
+            "/output/zimage_1778594193_38986c2306.png"
+        ],
+        "seed": 456958077833577,
+        "timestamp": 1778594193.124061,
+        "type": "zimage",
+        "params": {},
+        "task_id": "2"
+    },
+    {
+        "prompt": "a cute cat",
+        "images": [
+            "/output/zimage_1778594054_7184153f9b.png"
+        ],
+        "seed": 131300845907668,
+        "timestamp": 1778594054.3166084,
+        "type": "zimage",
+        "params": {},
+        "task_id": "1"
+    },
+    {
+        "prompt": "合并人物在一个画面中",
+        "images": [
+            "/output/klein_1778515594_2ea1fe0112.png"
+        ],
+        "seed": 571040730186542,
+        "timestamp": 1778515594.2945683,
+        "type": "klein",
+        "params": {
+            "158": {
+                "noise_seed": 793737
+            },
+            "168": {
+                "text": "合并人物在一个画面中"
+            },
+            "270": {
+                "image": "zimage_1778427145_5013eeb7b1.png"
+            },
+            "278": {
+                "image": "ai_ref_9a45f136e697.png"
+            },
+            "292": {
+                "image": ""
+            },
+            "313": {
+                "value": true
+            },
+            "314": {
+                "value": false
+            }
+        },
+        "task_id": "1"
+    },
+    {
+        "prompt": "A photo-realistic portrait of a young Asian man with short black hair, wearing a gray cardigan over a gray t-shirt. The man is standing in the middle of the image, with his upper body facing the viewer. He has a neutral expression and is looking directly at the camera. His short, neat black hair frames his face naturally. The background is blurred, but it appears to be an outdoor setting with trees and greenery. The lighting is soft and natural, highlighting his facial features and the texture of his hair. The image has a serene and contemplative atmosphere, with the man's body slightly angled towards the left side of the frame.",
+        "images": [
+            "/output/zimage_1778487497_cb0e8ecef3.png"
+        ],
+        "seed": 669846070433614,
+        "timestamp": 1778487497.8584409,
+        "type": "zimage",
+        "params": {},
+        "task_id": "6"
+    },
+    {
+        "prompt": "A photo-realistic portrait of a young Asian man with short black hair, wearing a gray cardigan over a gray t-shirt. The man is standing in the middle of the image, with his upper body facing the viewer. He has a neutral expression and is looking directly at the camera. His short, neat black hair frames his face naturally. The background is blurred, but it appears to be an outdoor setting with trees and greenery. The lighting is soft and natural, highlighting his facial features and the texture of his hair. The image has a serene and contemplative atmosphere, with the man's body slightly angled towards the left side of the frame.",
+        "images": [
+            "/output/zimage_1778483702_40321d5f1a.png"
+        ],
+        "seed": 213685631792406,
+        "timestamp": 1778483702.117831,
+        "type": "zimage",
+        "params": {},
+        "task_id": "5"
+    },
+    {
+        "prompt": "test",
+        "images": [
+            "/output/zimage_1778483492_eeb482f2a9.png"
+        ],
+        "seed": 752042564906057,
+        "timestamp": 1778483492.8189995,
+        "type": "zimage",
+        "params": {},
+        "task_id": "4"
+    },
+    {
+        "prompt": "合并人物在一个画面中",
+        "images": [
+            "/output/klein_1778483434_1d4429c4ec.png"
+        ],
+        "seed": 896749590775110,
+        "timestamp": 1778483434.7512105,
+        "type": "klein",
+        "params": {
+            "158": {
+                "noise_seed": 157491
+            },
+            "168": {
+                "text": "合并人物在一个画面中"
+            },
+            "270": {
+                "image": "zimage_1778427145_5013eeb7b1.png"
+            },
+            "278": {
+                "image": "ai_ref_9a45f136e697.png"
+            },
+            "292": {
+                "image": ""
+            },
+            "313": {
+                "value": true
+            },
+            "314": {
+                "value": false
+            }
+        },
+        "task_id": "3"
+    },
+    {
+        "prompt": "A photo-realistic portrait of a young Asian man with short black hair, wearing a gray cardigan over a gray t-shirt. The man is standing in the middle of the image, with his upper body facing the viewer. He has a neutral expression and is looking directly at the camera. His short, neat black hair frames his face naturally. The background is blurred, but it appears to be an outdoor setting with trees and greenery. The lighting is soft and natural, highlighting his facial features and the texture of his hair. The image has a serene and contemplative atmosphere, with the man's body slightly angled towards the left side of the frame.",
+        "images": [
+            "/output/zimage_1778483394_2a0b660315.png"
+        ],
+        "seed": 820119605468550,
+        "timestamp": 1778483394.9725723,
+        "type": "zimage",
+        "params": {},
+        "task_id": "2"
+    },
+    {
+        "prompt": "A photo-realistic portrait of a young Asian man with short black hair, wearing a gray cardigan over a gray t-shirt. The man is standing in the middle of the image, with his upper body facing the viewer. He has a neutral expression and is looking directly at the camera. His short, neat black hair frames his face naturally. The background is blurred, but it appears to be an outdoor setting with trees and greenery. The lighting is soft and natural, highlighting his facial features and the texture of his hair. The image has a serene and contemplative atmosphere, with the man's body slightly angled towards the left side of the frame.",
+        "images": [
+            "/output/zimage_1778483367_74958f7d2e.png"
+        ],
+        "seed": 354796095936032,
+        "timestamp": 1778483367.3331041,
+        "type": "zimage",
+        "params": {},
+        "task_id": "1"
+    },
+    {
+        "prompt": "A photo-realistic portrait of a young Asian man with short black hair, wearing a gray cardigan over a gray t-shirt. The man is standing in the middle of the image, with his upper body facing the viewer. He has a neutral expression and is looking directly at the camera. His short, neat black hair frames his face naturally. The background is blurred, but it appears to be an outdoor setting with trees and greenery. The lighting is soft and natural, highlighting his facial features and the texture of his hair. The image has a serene and contemplative atmosphere, with the man's body slightly angled towards the left side of the frame.",
+        "images": [
+            "/output/zimage_1778483075_900fb97180.png"
+        ],
+        "seed": 709893720087466,
+        "timestamp": 1778483075.0355198,
+        "type": "zimage",
+        "params": {},
+        "task_id": "5"
+    },
+    {
+        "prompt": "A photo-realistic portrait of a young Asian man with short black hair, wearing a gray cardigan over a gray t-shirt. The man is standing in the middle of the image, with his upper body facing the viewer. He has a neutral expression and is looking directly at the camera. His short, neat black hair frames his face naturally. The background is blurred, but it appears to be an outdoor setting with trees and greenery. The lighting is soft and natural, highlighting his facial features and the texture of his hair. The image has a serene and contemplative atmosphere, with the man's body slightly angled towards the left side of the frame.",
+        "images": [
+            "/output/zimage_1778483068_9d5daf9d00.png"
+        ],
+        "seed": 715358683848277,
+        "timestamp": 1778483068.809952,
+        "type": "zimage",
+        "params": {},
+        "task_id": "4"
+    },
+    {
+        "prompt": "合并人物在一个画面中1",
+        "images": [
+            "/output/klein_1778482976_b67b30e804.png"
+        ],
+        "seed": 444279194538947,
+        "timestamp": 1778482976.4280424,
+        "type": "klein",
+        "params": {
+            "158": {
+                "noise_seed": 360106
+            },
+            "168": {
+                "text": "合并人物在一个画面中1"
+            },
+            "270": {
+                "image": "zimage_1778427145_5013eeb7b1.png"
+            },
+            "278": {
+                "image": "ai_ref_9a45f136e697.png"
+            },
+            "292": {
+                "image": ""
+            },
+            "313": {
+                "value": true
+            },
+            "314": {
+                "value": false
+            }
+        },
+        "task_id": "3"
+    },
+    {
+        "prompt": "合并人物在一个画面中",
+        "images": [
+            "/output/klein_1778482956_ca79f876d0.png"
+        ],
+        "seed": 376539988896989,
+        "timestamp": 1778482956.8479276,
+        "type": "klein",
+        "params": {
+            "158": {
+                "noise_seed": 37440
+            },
+            "168": {
+                "text": "合并人物在一个画面中"
+            },
+            "270": {
+                "image": "zimage_1778427145_5013eeb7b1.png"
+            },
+            "278": {
+                "image": "ai_ref_9a45f136e697.png"
+            },
+            "292": {
+                "image": ""
+            },
+            "313": {
+                "value": true
+            },
+            "314": {
+                "value": false
+            }
+        },
+        "task_id": "2"
+    },
+    {
+        "prompt": "合并人物在一个画面中",
+        "images": [
+            "/output/klein_1778482930_b84315d53d.png"
+        ],
+        "seed": 652749966417075,
+        "timestamp": 1778482930.124072,
+        "type": "klein",
+        "params": {
+            "158": {
+                "noise_seed": 457011
+            },
+            "168": {
+                "text": "合并人物在一个画面中"
+            },
+            "270": {
+                "image": "zimage_1778427145_5013eeb7b1.png"
+            },
+            "278": {
+                "image": "ai_ref_9a45f136e697.png"
+            },
+            "292": {
+                "image": ""
+            },
+            "313": {
+                "value": true
+            },
+            "314": {
+                "value": false
+            }
+        },
+        "task_id": "1"
+    },
+    {
+        "prompt": "合并人物在一个画面中",
+        "images": [
+            "/output/klein_1778481761_e64d896478.png"
+        ],
+        "seed": 742116412862751,
+        "timestamp": 1778481761.978407,
+        "type": "klein",
+        "params": {
+            "158": {
+                "noise_seed": 605889
+            },
+            "168": {
+                "text": "合并人物在一个画面中"
+            },
+            "270": {
+                "image": "zimage_1778427145_5013eeb7b1.png"
+            },
+            "278": {
+                "image": "ai_ref_9a45f136e697.png"
+            },
+            "292": {
+                "image": ""
+            },
+            "313": {
+                "value": true
+            },
+            "314": {
+                "value": false
+            }
+        }
+    },
+    {
+        "prompt": "合并人物在一个画面中",
+        "images": [
+            "/output/klein_1778429484_b367d0e6a9.png"
+        ],
+        "seed": 365756570312888,
+        "timestamp": 1778429484.0261972,
+        "type": "klein",
+        "params": {
+            "158": {
+                "noise_seed": 567222
+            },
+            "168": {
+                "text": "合并人物在一个画面中"
+            },
+            "270": {
+                "image": "zimage_1778427145_5013eeb7b1.png"
+            },
+            "278": {
+                "image": "ai_ref_9a45f136e697.png"
+            },
+            "292": {
+                "image": "zimage_1778427145_5013eeb7b1.png"
+            },
+            "313": {
+                "value": true
+            },
+            "314": {
+                "value": true
+            }
+        }
+    },
+    {
+        "prompt": "A photo-realistic portrait of a young Asian man with short black hair, wearing a gray cardigan over a gray t-shirt. The man is standing in the middle of the image, with his upper body facing the viewer. He has a neutral expression and is looking directly at the camera. His short, neat black hair frames his face naturally. The background is blurred, but it appears to be an outdoor setting with trees and greenery. The lighting is soft and natural, highlighting his facial features and the texture of his hair. The image has a serene and contemplative atmosphere, with the man's body slightly angled towards the left side of the frame.",
+        "images": [
+            "/output/zimage_1778427145_5013eeb7b1.png"
+        ],
+        "seed": 821832432025828,
+        "timestamp": 1778427145.764987,
+        "type": "zimage",
+        "params": {}
+    },
+    {
+        "prompt": "A photo-realistic portrait of a young Asian woman with long black hair, wearing a gray cardigan over a gray t-shirt. the woman is standing in the middle of the image, with her upper body facing the viewer. she has a neutral expression and is looking directly at the camera. her long straight black hair falls down her back, framing her face. the background is blurred, but it appears to be an outdoor setting with trees and greenery. the lighting is soft and natural, highlighting her delicate features and the texture of her hair. the image has a serene and contemplative atmosphere, with the woman's body slightly angled towards the left side of the frame.,naomi",
+        "images": [
+            "/output/zimage_1778425462_9199aae5f8.png"
+        ],
+        "seed": 850109328730725,
+        "timestamp": 1778425462.8569884,
+        "type": "zimage",
+        "params": {}
+    },
+    {
+        "prompt": "Detail Enhance",
+        "images": [
+            "/output/enhance_1778424700_f34e02319f.png"
+        ],
+        "seed": 987767730554344,
+        "timestamp": 1778424700.5072458,
+        "type": "enhance",
+        "params": {
+            "15": {
+                "image": "ai_ref_9a45f136e697.png"
+            },
+            "204": {
+                "value": 0.5
+            }
+        }
+    }
+]

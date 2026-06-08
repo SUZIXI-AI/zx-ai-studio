@@ -1,0 +1,11 @@
+{
+  "id": "social-clip",
+  "name": "社媒短视频",
+  "description": "适合抖音/视频号开场钩子和信息流短片，9:16 优先",
+  "duration_options": [3, 5, 8, 12],
+  "aspect_options": ["9:16", "1:1", "16:9"],
+  "fields": [
+    { "key": "title", "label": "钩子标题", "type": "text", "required": true },
+    { "key": "body", "label": "正文", "type": "textarea" }
+  ]
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="zealman AUTODL 模型下载命令大全 - 使用 cg down 下载模型">
+    <meta property="og:title" content="zealman AUTODL 模型下载命令大全">
+    <meta property="og:description" content="zealman AUTODL 模型下载命令大全 - 使用 cg down 下载模型">
+    <meta property="og:type" content="website">
+    <title>zealman ComfyUI 模型下载命令</title>
+    <link rel="icon" href="/zx-ai-logo.svg?v=1779059399773" type="image/svg+xml" sizes="any" />
+
+
+<!-- 引入独立的 CSS 文件 -->
+    <link rel="stylesheet" href="symlinks.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 左侧 Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>⬇️ zealman ComfyUI 模型</h1>
+                <p class="sidebar-subtitle">下载命令配置</p>
+            </div>
+            
+            <!-- 搜索框 -->
+            <div class="sidebar-search">
+                <div class="search-input-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-input" id="searchInput" placeholder="搜索分类或模型..." autocomplete="off">
+                    <button class="search-clear" id="searchClear">✕</button>
+                </div>
+            </div>
+            
+            <!-- 分类导航列表 -->
+            <nav class="sidebar-nav" id="categoryNavList">
+                <!-- 导航组将由 JS 动态插入到这里 -->
+            </nav>
+            
+        </aside>
+        
+        <!-- 移动端菜单按钮 -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="切换菜单">
+            <span class="menu-icon">☰</span>
+        </button>
+        
+        <!-- 移动端遮罩层 -->
+        <div class="mobile-overlay" id="mobileOverlay"></div>
+        
+        <!-- 右侧主内容区 -->
+        <main class="main-content">
+            <div class="content-header">
+                <div class="content-title-wrapper">
+                    <h2 class="content-title" id="contentTitle">ComfyUI 模型下载命令使用</h2>
+                    <p class="content-subtitle" id="contentSubtitle">了解如何使用 cg down 命令下载模型文件</p>
+                </div>
+            </div>
+            
+            <div class="content-body" id="contentBody">
+                <div class="no-results" id="noResults">zealman AUTODL 模型下载命令大全</div>
+                
+                <!-- 默认介绍页面 -->
+                <div class="intro-page" id="introPage">
+                    <div class="intro-content">
+                        <h1 class="intro-title">AUTODL 应用平台模型下载工具</h1>
+                        <p class="intro-description">使用 cg down 命令快速下载模型文件，方便管理和使用。<br>所有模型都提供了完整的下载命令，可以直接复制使用。</p>
+                        
+                        <h2 class="intro-section-title">cg down 下载工具使用</h2>
+                        
+                        <h3 class="intro-subtitle">安装 cg down</h3>
+                        <p class="intro-text">使用 cg down 下载文件需要先安装 codewithgpu 工具包：</p>
+                        
+                        <div class="intro-code-block">
+                            <pre><code>pip install codewithgpu</code></pre>
+                        </div>
+                        
+                        <h3 class="intro-subtitle">如何使用 cg down 下载？</h3>
+                        <p class="intro-text">安装完成后，您可以使用 <code class="intro-inline-code">cg down</code> 命令下载模型文件。</p>
+                        
+                        <p class="intro-text"><strong>示例：</strong></p>
+                        <p class="intro-text">下载模型文件 <code class="intro-inline-code">umt5-xxl-enc-fp8_e4m3fn.safetensors</code>：</p>
+                        
+                        <div class="intro-code-block">
+                            <pre><code>cg down zealman/Wan_2.2/umt5-xxl-enc-fp8_e4m3fn.safetensors</code></pre>
+                        </div>
+                        
+                        <h3 class="intro-subtitle">下载目录说明</h3>
+                        <p class="intro-text">使用 <code class="intro-inline-code">cg down</code> 下载的文件会默认带有下载链接中的目录文件夹。</p>
+                        
+                        <p class="intro-text"><strong>例如：</strong></p>
+                        <p class="intro-text">执行命令 <code class="intro-inline-code">cg down zealman/Wan_2.2/umt5-xxl-enc-fp8_e4m3fn.safetensors</code> 后，文件会被下载到当前目录下的 <code class="intro-inline-code">Wan_2.2</code> 文件夹中，完整路径为：</p>
+                        
+                        <div class="intro-code-block">
+                            <pre><code>./Wan_2.2/umt5-xxl-enc-fp8_e4m3fn.safetensors</code></pre>
+                        </div>
+                        
+                        <h3 class="intro-subtitle">移动到目标目录</h3>
+                        <p class="intro-text">如果您希望将文件直接下载到目标目录（而不是在下载链接的目录文件夹中），需要执行以下步骤：</p>
+                        
+                        <p class="intro-text"><strong>步骤 1：</strong> 执行下载命令</p>
+                        <div class="intro-code-block">
+                            <pre><code>cg down zealman/Wan_2.2/umt5-xxl-enc-fp8_e4m3fn.safetensors</code></pre>
+                        </div>
+                        
+                        <p class="intro-text"><strong>步骤 2：</strong> 将文件从下载目录移动到上一级文件夹</p>
+                        <div class="intro-code-block">
+                            <pre><code>mv Wan_2.2/umt5-xxl-enc-fp8_e4m3fn.safetensors ./umt5-xxl-enc-fp8_e4m3fn.safetensors</code></pre>
+                        </div>
+                        
+                        <p class="intro-text"><strong>步骤 3：</strong> 删除下载时创建的目录文件夹</p>
+                        <div class="intro-code-block">
+                            <pre><code>rmdir Wan_2.2</code></pre>
+                        </div>
+                        
+                        <p class="intro-text">或者如果目录不为空，使用：</p>
+                        <div class="intro-code-block">
+                            <pre><code>rm -rf Wan_2.2</code></pre>
+                        </div>
+                        
+                        <p class="intro-text"><strong>完整示例：</strong></p>
+                        <div class="intro-code-block">
+                            <pre><code># 下载文件
+cg down zealman/Wan_2.2/umt5-xxl-enc-fp8_e4m3fn.safetensors
+
+# 移动到当前目录
+mv Wan_2.2/umt5-xxl-enc-fp8_e4m3fn.safetensors ./umt5-xxl-enc-fp8_e4m3fn.safetensors
+
+# 删除下载目录
+rmdir Wan_2.2</code></pre>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- 所有分类内容将动态加载到这里 -->
+                <div class="categories-container" id="categoriesContainer">
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- 引入独立的 JS 文件，并使用 defer 确保 DOM 加载后再执行 -->
+    <script src="scripts_models_links.js" defer></script>
+</body>
+</html>

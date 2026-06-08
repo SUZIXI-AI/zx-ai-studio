@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ComfyUI Control Panel</title>
+    <link rel="icon" href="/zx-ai-logo.svg?v=1779059399773" type="image/svg+xml" sizes="any" />
+
+
+<!-- 防止主题切换闪烁（FOUC），在 React 加载前应用主题 -->
+    <script>(function(){try{var t=localStorage.getItem('zealman-theme');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');}catch(e){}})()</script>
+    <!-- 预加载标题用字体 -->
+    <link rel="preload" href="/fonts/RacingSansOne-Regular.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/SpeedoPERSONALUSEONLY.ttf" as="font" crossorigin="anonymous" />
+    <!-- 本地字体 -->
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+
+
+<script>
+// 局域网环境检测和本地文件fallback
+(function() {
+  // 检测是否在局域网环境（通过检查是否能访问外部CDN）
+  const isLocalNetwork = () => {
+    // 检查URL是否包含局域网IP或localhost
+    const hostname = window.location.hostname;
+    return hostname.includes('192.168.') || 
+           hostname.includes('10.') || 
+           hostname.includes('172.') || 
+           hostname === 'localhost' || 
+           hostname === '127.0.0.1';
+  };
+  
+  // 检测CDN可用性
+  const testCDNAvailability = () => {
+    return new Promise((resolve) => {
+      const testUrl = 'https://aistudiocdn.com/react@^19.1.1';
+      const timeout = setTimeout(() => resolve(false), 3000); // 3秒超时
+      
+      fetch(testUrl, { 
+        mode: 'no-cors',
+        cache: 'no-cache'
+      }).then(() => {
+        clearTimeout(timeout);
+        resolve(true);
+      }).catch(() => {
+        clearTimeout(timeout);
+        resolve(false);
+      });
+    });
+  };
+  
+  // 切换到本地模块
+  const switchToLocalModules = () => {
+    console.log('🔄 检测到局域网环境或CDN不可用，切换到本地React模块...');
+    
+    const localImportMap = {
+      "imports": {
+        "react-dom/": "/libs/react-dom/",
+        "react/": "/libs/react/",
+        "react": "/libs/react.mjs"
+      }
+    };
+    
+    // 移除现有的importmap
+    const existingImportMap = document.querySelector('script[type="importmap"]');
+    if (existingImportMap) {
+      existingImportMap.remove();
+    }
+    
+    // 添加本地importmap
+    const script = document.createElement('script');
+    script.type = 'importmap';
+    script.textContent = JSON.stringify(localImportMap);
+    document.head.appendChild(script);
+    
+    console.log('✅ 已切换到本地React模块');
+  };
+  
+  // 主逻辑
+  const initModules = async () => {
+    if (isLocalNetwork()) {
+      console.log('🏠 检测到局域网环境');
+      switchToLocalModules();
+    } else {
+      console.log('🌐 检测到外网环境，测试CDN可用性...');
+      const cdnAvailable = await testCDNAvailability();
+      if (!cdnAvailable) {
+        console.log('❌ CDN不可用，切换到本地模块');
+        switchToLocalModules();
+      } else {
+        console.log('✅ CDN可用，使用在线模块');
+      }
+    }
+  };
+  
+  // 页面加载完成后初始化
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initModules);
+  } else {
+    initModules();
+  }
+})();
+</script>
+
+
+
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-CzIKK_Ne.js?v=1779318591327"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CnRlFEb9.css?v=1778781487279">
+  <link rel="stylesheet" href="/custom-override.css?v=1779318591327" />
+  <link rel="stylesheet" href="/custom-one-click-movie.css?v=1779988156738" />
+</head>
+  <body>
+    <div id="root"></div>
+
+
+  <script>
+    // 字体加载完成检测（已移除 Material Symbols 相关代码）
+    if ('fonts' in document) {
+      // 等待所有字体加载完成
+      document.fonts.ready.then(() => {
+        document.body.classList.add('fonts-loaded');
+        console.log('✅ 所有字体加载完成');
+      }).catch((error) => {
+        console.warn('⚠️ 字体加载检测失败:', error);
+        document.body.classList.add('fonts-loaded');
+      });
+    } else {
+      // 不支持 Font Loading API 时，延迟添加类
+      setTimeout(() => {
+        document.body.classList.add('fonts-loaded');
+      }, 100);
+    }
+  </script>
+  <script defer src="/custom-resource-migration-lock.js?v=1778966763113"></script>
+  <script defer src="/custom-api-docs-lock.js?v=1779048420468"></script>
+  <script defer src="/custom-api-docs-privacy.js?v=1779054272626"></script>
+  <script defer src="/custom-theme-switch.js?v=1779122960262"></script>
+  <script defer src="/custom-api-provider-panel.js?v=1779289230829"></script>
+  <script defer src="/custom-one-click-movie.js?v=1780609514681"></script>
+</body>
+</html>
+
+
+
+

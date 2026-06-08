@@ -1,0 +1,183 @@
+{
+  "88": {
+    "inputs": {
+      "conditioning": [
+        "93",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "89": {
+    "inputs": {
+      "shift": 3,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "采样算法（AuraFlow）"
+    }
+  },
+  "90": {
+    "inputs": {
+      "samples": [
+        "99",
+        0
+      ],
+      "vae": [
+        "92",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "91": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "92": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": " 日漫校园纯爱风，浅棕色齐耳短发配空气刘海，少女身着米白色针织衫 + 藏青色百褶裙，站在铺满银杏叶的校园小径，风扬起发丝与裙摆，手持泛黄的信封，背景是红砖墙教学楼与远处的樱花树，暖调光影，线条细腻柔和，眼神清澈带羞，画面满是青春悸动",
+      "clip": [
+        "91",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "94": {
+    "inputs": {
+      "width": 768,
+      "height": 1136,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "95": {
+    "inputs": {
+      "filename_prefix": "z-image",
+      "images": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "96": {
+    "inputs": {
+      "model_name": "nunchaku/svdq-fp4_r128-z-image-turbo.safetensors"
+    },
+    "class_type": "NunchakuZImageDiTLoader",
+    "_meta": {
+      "title": "Nunchaku Z-Image DiT Loader"
+    }
+  },
+  "99": {
+    "inputs": {
+      "seed": 485651271348724,
+      "steps": 9,
+      "cfg": 1,
+      "sampler_name": "res_multistep",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "89",
+        0
+      ],
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "88",
+        0
+      ],
+      "latent_image": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "_api_config": {
+    "customLabels": {
+      "89:shift": "shift (节点 89)",
+      "91:type": "type (节点 91)",
+      "91:device": "device (节点 91)",
+      "93:text": "提示词 (节点 93)",
+      "94:width": "宽度",
+      "94:height": "高度",
+      "94:batch_size": "批次大小",
+      "95:filename_prefix": "文件名前缀",
+      "99:seed": "随机种子 (节点 99)",
+      "99:steps": "迭代步数",
+      "99:cfg": "CFG Scale",
+      "99:denoise": "denoise (节点 99)"
+    },
+    "enabledParams": {
+      "89:shift": false,
+      "91:type": false,
+      "91:device": false,
+      "93:text": true,
+      "94:width": true,
+      "94:height": true,
+      "94:batch_size": false,
+      "95:filename_prefix": false,
+      "99:seed": true,
+      "99:steps": false,
+      "99:cfg": false,
+      "99:denoise": false
+    },
+    "formValues": {
+      "89:shift": 3,
+      "91:type": "lumina2",
+      "91:device": "default",
+      "93:text": " 日漫校园纯爱风，浅棕色齐耳短发配空气刘海，少女身着米白色针织衫 + 藏青色百褶裙，站在铺满银杏叶的校园小径，风扬起发丝与裙摆，手持泛黄的信封，背景是红砖墙教学楼与远处的樱花树，暖调光影，线条细腻柔和，眼神清澈带羞，画面满是青春悸动",
+      "94:width": 768,
+      "94:height": 1136,
+      "94:batch_size": 1,
+      "95:filename_prefix": "z-image",
+      "99:seed": 966695313,
+      "99:steps": 9,
+      "99:cfg": 1,
+      "99:denoise": 1
+    }
+  }
+}

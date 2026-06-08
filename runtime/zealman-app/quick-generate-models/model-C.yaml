@@ -1,0 +1,44 @@
+# 快捷生成页面 C 组模型配置 - Wan 2.2 双噪图生视频组合
+# 对应工作流: Video/10.WAN2.2 万相图生视频.json
+#2025-10-14 15：50
+
+diffusion_models:
+- id: wan2_2_i2v_high_noise_14b_fp8_scaled
+  type: diffusion_models
+  displayName: wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  fileName: wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  downloadUrl: zealman/Wan_2.2/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  subfolder: Wan
+  size: 13.00GB
+- id: wan2_2_i2v_low_noise_14b_fp8_scaled
+  type: diffusion_models
+  displayName: wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  fileName: wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  downloadUrl: zealman/Wan_2.2/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  subfolder: Wan
+  size: 13.00GB
+text_encoders:
+- id: umt5_xxl_enc_fp8_e4m3fn
+  type: text_encoders
+  displayName: umt5-xxl-enc-fp8_e4m3fn.safetensors
+  fileName: umt5-xxl-enc-fp8_e4m3fn.safetensors
+  downloadUrl: zealman/Wan_2.2/umt5-xxl-enc-fp8_e4m3fn.safetensors
+  size: 6.30GB
+loras:
+- id: lightx2v_i2v_14b_480p_cfg_step_distill_rank128_bf1
+  type: loras
+  displayName: lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16.safetensors
+  fileName: lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16.safetensors
+  downloadUrl: zealman/Wan_2.2/lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16.safetensors
+  subfolder: Lightx2v
+  size: 1.40GB
+combinations:
+- id: combo_group_c
+  name: Wan 2.2 双噪图生视频组合
+  subtitle: 同本镜像内Comfyui工作流中的10号工作流，24帧
+  group: C
+  modelIds:
+  - wan2_2_i2v_high_noise_14b_fp8_scaled
+  - wan2_2_i2v_low_noise_14b_fp8_scaled
+  - umt5_xxl_enc_fp8_e4m3fn
+  - lightx2v_i2v_14b_480p_cfg_step_distill_rank128_bf1

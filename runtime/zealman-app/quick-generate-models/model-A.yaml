@@ -1,0 +1,38 @@
+# 快捷生成页面 A 组模型配置 - Smooth Mix图生视频组合
+# 对应工作流: Video/18.Smooth Mix Wan 2.2workflow.json
+#2025-10-14 15：50
+
+diffusion_models:
+  - id: smoothmixwan22i2vt2v_i2vhigh
+    type: diffusion_models
+    displayName: smoothMixWan22I2VT2V_i2vHigh.safetensors
+    fileName: smoothMixWan22I2VT2V_i2vHigh.safetensors
+    size: 20.00GB
+    downloadUrl: zealman/Wan_2.2/smoothMixWan22I2VT2V_i2vHigh.safetensors
+    subfolder: Wan
+  - id: smoothmixwan22i2vt2v_i2vlow
+    type: diffusion_models
+    displayName: smoothMixWan22I2VT2V_i2vLow.safetensors
+    fileName: smoothMixWan22I2VT2V_i2vLow.safetensors
+    size: 20.00GB
+    downloadUrl: zealman/Wan_2.2/smoothMixWan22I2VT2V_i2vLow.safetensors
+    subfolder: Wan
+
+text_encoders:
+  - id: umt5_xxl_fp8_e4m3fn_scaled
+    type: text_encoders
+    displayName: umt5_xxl_fp8_e4m3fn_scaled.safetensors
+    fileName: umt5_xxl_fp8_e4m3fn_scaled.safetensors
+    size: 6.30GB
+    downloadUrl: zealman/Wan_2.2/umt5_xxl_fp8_e4m3fn_scaled.safetensors
+
+combinations:
+  - id: combo_group_a
+    name: Smooth Mix图生视频组合
+    subtitle: 同本镜像内Comfyui工作流中的18号工作流，带插帧最后输出为30帧，和一张尾帧图（可做下个视频的首帧）
+    group: A
+    isDefault: true
+    modelIds:
+      - smoothmixwan22i2vt2v_i2vhigh
+      - smoothmixwan22i2vt2v_i2vlow
+      - umt5_xxl_fp8_e4m3fn_scaled

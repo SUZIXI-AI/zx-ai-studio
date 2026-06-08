@@ -1,0 +1,626 @@
+{
+  "workflow-1778430268935-op8lr": {
+    "workflow_id": "workflow-1778430268935-op8lr",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-10T16:24:28.965Z",
+    "last_prompt_id": "e0fa713d-edbe-4146-9a28-8e79904ac46f"
+  },
+  "A01-文生图-Qwen2512高清放大": {
+    "workflow_id": "A01-文生图-Qwen2512高清放大",
+    "total_runs": 46,
+    "success_submits": 46,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-12T14:06:26.594Z",
+    "last_prompt_id": "b9d5b415-f920-4eab-b829-55c52f32dfa6"
+  },
+  "workflow-1778434639552-yxi9k": {
+    "workflow_id": "workflow-1778434639552-yxi9k",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-10T17:37:19.565Z",
+    "last_prompt_id": "341a344a-ac1d-45d1-a457-038f0b6e7a8b"
+  },
+  "workflow-1778434683188-0dghvh": {
+    "workflow_id": "workflow-1778434683188-0dghvh",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-10T17:38:03.202Z",
+    "last_prompt_id": "e0bd6bd6-a651-4133-ba05-675a1032b1cd"
+  },
+  "workflow-1778465296482-mjk6ha": {
+    "workflow_id": "workflow-1778465296482-mjk6ha",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T02:08:16.689Z",
+    "last_prompt_id": "d02e3a62-81e2-444c-abe7-dc9673cbd995"
+  },
+  "workflow-1778466226724-7yvz4m": {
+    "workflow_id": "workflow-1778466226724-7yvz4m",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T02:23:46.937Z",
+    "last_prompt_id": "f4913dbe-2d70-44f5-9d1a-227b5f4159ef"
+  },
+  "workflow-1778466889020-1sitxa": {
+    "workflow_id": "workflow-1778466889020-1sitxa",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T02:34:49.063Z",
+    "last_prompt_id": "1265c9ec-62f8-4f62-9114-588cb75d6a21"
+  },
+  "workflow-1778467439170-bfrveh": {
+    "workflow_id": "workflow-1778467439170-bfrveh",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T02:43:59.186Z",
+    "last_prompt_id": "5e452f14-162f-41e8-a2d3-6cb7c331db83"
+  },
+  "workflow-1778468544876-r0dgzl": {
+    "workflow_id": "workflow-1778468544876-r0dgzl",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T03:02:24.920Z",
+    "last_prompt_id": "b688687b-a28f-40f7-b73e-0ecd3dc0348b"
+  },
+  "workflow-1778468866235-h3qfv8": {
+    "workflow_id": "workflow-1778468866235-h3qfv8",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T03:07:46.247Z",
+    "last_prompt_id": "b3f8af8c-26de-4867-a4f5-e9696d9ae786"
+  },
+  "workflow-1778469739424-012odh": {
+    "workflow_id": "workflow-1778469739424-012odh",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T03:22:19.437Z",
+    "last_prompt_id": "b673b3f7-d011-4a7f-ae1e-9b9f922a2719"
+  },
+  "image_C01-文生图-Zimage基础版": {
+    "workflow_id": "image_C01-文生图-Zimage基础版",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T03:32:11.006Z",
+    "last_prompt_id": "f23f8be9-c0e4-4f8b-8997-e80804e799c3"
+  },
+  "workflow-1778473954098-749jmg": {
+    "workflow_id": "workflow-1778473954098-749jmg",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T04:32:34.108Z",
+    "last_prompt_id": "838b6cc7-2ccf-4b42-9262-86d699aebc28"
+  },
+  "workflow-1778473983690-y3tu5r": {
+    "workflow_id": "workflow-1778473983690-y3tu5r",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T04:33:03.710Z",
+    "last_prompt_id": "10ab6efe-a940-45c1-94df-fb1fbc5cbdf6"
+  },
+  "workflow-1778475099123-5igkhi": {
+    "workflow_id": "workflow-1778475099123-5igkhi",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T04:51:39.159Z",
+    "last_prompt_id": "5f4dd386-0366-43b7-bf5f-6d1131f26a8c"
+  },
+  "workflow-1778475934576-lht91j": {
+    "workflow_id": "workflow-1778475934576-lht91j",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T05:05:34.588Z",
+    "last_prompt_id": "9a7dfa55-ddd5-4113-94cf-0ad47ac036c4"
+  },
+  "workflow-1778475958265-noq6pb": {
+    "workflow_id": "workflow-1778475958265-noq6pb",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T05:05:58.294Z",
+    "last_prompt_id": "60b166c8-d2bb-4012-b103-ef12edaaa4fb"
+  },
+  "workflow-1778476149814-qabhrt": {
+    "workflow_id": "workflow-1778476149814-qabhrt",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T05:09:09.865Z",
+    "last_prompt_id": "f5d5bbc1-38bb-4f68-8960-0d1a9eb0aeb5"
+  },
+  "workflow-1778476471827-p5on2r": {
+    "workflow_id": "workflow-1778476471827-p5on2r",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T05:14:31.843Z",
+    "last_prompt_id": "4b015c47-ac22-4476-a6c3-bc6c789b59c2"
+  },
+  "workflow-1778476485454-nnfq6a": {
+    "workflow_id": "workflow-1778476485454-nnfq6a",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T05:14:45.464Z",
+    "last_prompt_id": "48d5b8db-04b8-451a-bb5d-ca177cd1dca0"
+  },
+  "workflow-1778476988527-asou5k": {
+    "workflow_id": "workflow-1778476988527-asou5k",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T05:23:08.542Z",
+    "last_prompt_id": "9074e6a9-f725-4d08-affa-65771cc4790d"
+  },
+  "workflow-1778477359350-l7bq9h": {
+    "workflow_id": "workflow-1778477359350-l7bq9h",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T05:29:19.363Z",
+    "last_prompt_id": "d2476486-9b27-4620-a0f7-2eb2e7725d6f"
+  },
+  "workflow-1778477526083-pprrl6": {
+    "workflow_id": "workflow-1778477526083-pprrl6",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T05:32:06.099Z",
+    "last_prompt_id": "ccfbdefe-0079-44d8-b5e2-b886354d79c1"
+  },
+  "workflow-1778477564601-nmc7l": {
+    "workflow_id": "workflow-1778477564601-nmc7l",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T05:32:44.610Z",
+    "last_prompt_id": "a8981879-896a-46ba-9aee-d8936d51f129"
+  },
+  "workflow-1778477570786-50668": {
+    "workflow_id": "workflow-1778477570786-50668",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T05:32:50.795Z",
+    "last_prompt_id": "53fe3815-38bf-4fd7-9060-9b8c1f37b279"
+  },
+  "workflow-1778477873004-2srpxs": {
+    "workflow_id": "workflow-1778477873004-2srpxs",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T05:37:53.016Z",
+    "last_prompt_id": "cd1ee507-4e8e-4391-86ab-e5e6fa346898"
+  },
+  "workflow-1778490559399-hq3868": {
+    "workflow_id": "workflow-1778490559399-hq3868",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T09:09:19.420Z",
+    "last_prompt_id": "a2cbf54e-9c7e-470d-88bf-573bb51c78ba"
+  },
+  "workflow-1778495239429-y42cka": {
+    "workflow_id": "workflow-1778495239429-y42cka",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T10:27:19.445Z",
+    "last_prompt_id": "5f7ccf6f-25c5-4364-a4ae-a5bdb1ee9fc5"
+  },
+  "workflow-1778495240807-mz055": {
+    "workflow_id": "workflow-1778495240807-mz055",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T10:27:20.850Z",
+    "last_prompt_id": "4b62a981-3852-490a-895a-5e01d5aaef4e"
+  },
+  "workflow-1778495815531-5kohre": {
+    "workflow_id": "workflow-1778495815531-5kohre",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T10:36:55.544Z",
+    "last_prompt_id": "efd1b0c9-8e31-4927-981b-6d577fa080d5"
+  },
+  "workflow-1778496729753-tbe52": {
+    "workflow_id": "workflow-1778496729753-tbe52",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T10:52:09.769Z",
+    "last_prompt_id": "837b54ba-7e26-4e67-acce-5b3247063aee"
+  },
+  "workflow-1778496734928-i2m0d": {
+    "workflow_id": "workflow-1778496734928-i2m0d",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T10:52:14.945Z",
+    "last_prompt_id": "e8bf7089-3701-422c-9cf5-3dafe714178d"
+  },
+  "workflow-1778501613207-q4441": {
+    "workflow_id": "workflow-1778501613207-q4441",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T12:13:33.394Z",
+    "last_prompt_id": "02262b36-59e1-4313-9e3c-3a9c8559d1d4"
+  },
+  "workflow-1778501868851-mo5nw": {
+    "workflow_id": "workflow-1778501868851-mo5nw",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T12:17:48.868Z",
+    "last_prompt_id": "325e51df-75a1-43ae-807c-ea277cc50912"
+  },
+  "workflow-1778501879955-qta2a": {
+    "workflow_id": "workflow-1778501879955-qta2a",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T12:17:59.968Z",
+    "last_prompt_id": "1aafb973-eb6a-479e-bcf1-b6d470b2f43a"
+  },
+  "workflow-1778502103877-3zeeg": {
+    "workflow_id": "workflow-1778502103877-3zeeg",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T12:21:43.913Z",
+    "last_prompt_id": "05bbc0b9-0777-4af7-9f11-265e53b29ab9"
+  },
+  "workflow-1778502161990-8qksqx": {
+    "workflow_id": "workflow-1778502161990-8qksqx",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T12:22:42.001Z",
+    "last_prompt_id": "6629f46a-9162-4ba8-859f-6a2771afd69b"
+  },
+  "workflow-1778503119317-zblg0r": {
+    "workflow_id": "workflow-1778503119317-zblg0r",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T12:38:39.335Z",
+    "last_prompt_id": "9c90ccae-75c4-4147-907e-1bcb9a2e13f7"
+  },
+  "workflow-1778503153774-z1uljp": {
+    "workflow_id": "workflow-1778503153774-z1uljp",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T12:39:13.785Z",
+    "last_prompt_id": "ae6c17aa-2d85-4121-ba3c-2fe326ea00b9"
+  },
+  "workflow-1778503360624-k0u2ga": {
+    "workflow_id": "workflow-1778503360624-k0u2ga",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T12:42:40.670Z",
+    "last_prompt_id": "f091bb81-6a55-41b8-8fa3-f45107b56ef1"
+  },
+  "workflow-1778503364887-gezilp": {
+    "workflow_id": "workflow-1778503364887-gezilp",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T12:42:44.907Z",
+    "last_prompt_id": "710362cf-decf-4d29-bb00-7b0f4f492656"
+  },
+  "workflow-1778504087108-kfzhek": {
+    "workflow_id": "workflow-1778504087108-kfzhek",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T12:54:47.122Z",
+    "last_prompt_id": "88bae439-7a75-45d8-8407-905f5fe65407"
+  },
+  "workflow-1778504480345-rt6f17": {
+    "workflow_id": "workflow-1778504480345-rt6f17",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T13:01:20.357Z",
+    "last_prompt_id": "1fd29e1e-2c9b-429d-8134-38d812926879"
+  },
+  "workflow-1778504483220-sr55lhj": {
+    "workflow_id": "workflow-1778504483220-sr55lhj",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T13:01:23.231Z",
+    "last_prompt_id": "b4a2b587-96ad-4c0b-acdb-4626a1a33dd1"
+  },
+  "workflow-1778504701199-u77hz8": {
+    "workflow_id": "workflow-1778504701199-u77hz8",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T13:05:01.217Z",
+    "last_prompt_id": "cbfb4a1a-1165-4444-9937-00ab86c7a3ec"
+  },
+  "workflow-1778504705573-k5n7k": {
+    "workflow_id": "workflow-1778504705573-k5n7k",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T13:05:05.591Z",
+    "last_prompt_id": "e68d64d6-2335-4f0e-b348-885b6a159b63"
+  },
+  "workflow-1778505130249-3pay8u": {
+    "workflow_id": "workflow-1778505130249-3pay8u",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T13:12:10.254Z",
+    "last_prompt_id": "5d6bf55e-994b-4e9b-97de-7ec0133a6eca"
+  },
+  "workflow-1778505577966-o0py1b": {
+    "workflow_id": "workflow-1778505577966-o0py1b",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T13:19:37.979Z",
+    "last_prompt_id": "bc0a0076-ee7d-404b-8e11-af2258c7218d"
+  },
+  "workflow-1778505856389-ss0ibb": {
+    "workflow_id": "workflow-1778505856389-ss0ibb",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T13:24:16.403Z",
+    "last_prompt_id": "ed87d2ac-cfe3-42fe-b7a1-211076d91ff3"
+  },
+  "workflow-1778505980468-4q2l1b": {
+    "workflow_id": "workflow-1778505980468-4q2l1b",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T13:26:20.480Z",
+    "last_prompt_id": "aee5ccd1-6524-4ca5-8afc-f9351436ae4d"
+  },
+  "workflow-1778506567067-i6c3os": {
+    "workflow_id": "workflow-1778506567067-i6c3os",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T13:36:07.088Z",
+    "last_prompt_id": "015ed10b-e034-4fa5-915a-a16f10301745"
+  },
+  "workflow-1778507022682-wqgdth": {
+    "workflow_id": "workflow-1778507022682-wqgdth",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T13:43:42.696Z",
+    "last_prompt_id": "bd3b3364-cd36-4373-b760-de6d27e21f8a"
+  },
+  "workflow-1778507024565-47hmof": {
+    "workflow_id": "workflow-1778507024565-47hmof",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T13:43:44.578Z",
+    "last_prompt_id": "34d776b3-4f6a-4477-9cdf-89e4fdbf7fc8"
+  },
+  "workflow-1778507061866-rgxgh": {
+    "workflow_id": "workflow-1778507061866-rgxgh",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T13:44:21.877Z",
+    "last_prompt_id": "192c9fd6-e863-4b98-aaae-3f0524f58ea7"
+  },
+  "workflow-1778507064495-14r85": {
+    "workflow_id": "workflow-1778507064495-14r85",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T13:44:24.511Z",
+    "last_prompt_id": "44f422eb-4862-40c6-a675-5799da09dc30"
+  },
+  "workflow-1778507320039-9lex6g": {
+    "workflow_id": "workflow-1778507320039-9lex6g",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T13:48:40.051Z",
+    "last_prompt_id": "1640e87c-b389-4155-8160-67d886182a1b"
+  },
+  "workflow-1778507322890-rdwxke": {
+    "workflow_id": "workflow-1778507322890-rdwxke",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T13:48:42.902Z",
+    "last_prompt_id": "c0a42078-7a7e-4362-af4e-4f749ee6107c"
+  },
+  "workflow-1778507426140-niebfb": {
+    "workflow_id": "workflow-1778507426140-niebfb",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T13:50:26.157Z",
+    "last_prompt_id": "db07a9b5-14f9-45e0-88d7-9c21075e6da4"
+  },
+  "workflow-1778509095917-rw00ra": {
+    "workflow_id": "workflow-1778509095917-rw00ra",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T14:18:15.927Z",
+    "last_prompt_id": "1a1bc504-4eb6-4aba-998f-7a7d71410b31"
+  },
+  "workflow-1778509186763-etac": {
+    "workflow_id": "workflow-1778509186763-etac",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T14:19:46.983Z",
+    "last_prompt_id": "b2858687-3104-4768-8fbc-fa2b488b771f"
+  },
+  "workflow-1778510072307-l51mub": {
+    "workflow_id": "workflow-1778510072307-l51mub",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T14:34:32.324Z",
+    "last_prompt_id": "ea848689-29d7-4cab-902c-70e71fbbe436"
+  },
+  "workflow-1778511969584-bhnfh": {
+    "workflow_id": "workflow-1778511969584-bhnfh",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T15:06:09.810Z",
+    "last_prompt_id": "c31df379-e4d7-48c3-8731-464a465d8def"
+  },
+  "workflow-1778512058208-7k25vr": {
+    "workflow_id": "workflow-1778512058208-7k25vr",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T15:07:38.223Z",
+    "last_prompt_id": "e110d7eb-b703-4929-ad5b-c2ceec461533"
+  },
+  "workflow-1778512069553-y7dsp9": {
+    "workflow_id": "workflow-1778512069553-y7dsp9",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T15:07:49.601Z",
+    "last_prompt_id": "7a4860e2-7286-48b9-b023-9c898445acd5"
+  },
+  "workflow-1778512246244-j2vsym": {
+    "workflow_id": "workflow-1778512246244-j2vsym",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T15:10:46.262Z",
+    "last_prompt_id": "aacd0e25-d35c-46fd-a4bf-89aa258197f8"
+  },
+  "workflow-1778514177061-1ie4ia": {
+    "workflow_id": "workflow-1778514177061-1ie4ia",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T15:42:57.075Z",
+    "last_prompt_id": "15c4bd5b-6ba0-422f-bd9a-a08b29319808"
+  },
+  "workflow-1778514721281-8hlgaq": {
+    "workflow_id": "workflow-1778514721281-8hlgaq",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T15:52:01.290Z",
+    "last_prompt_id": "05691770-da57-420a-a1a7-a6e278263dba"
+  },
+  "workflow-1778515607073-ltrc0k": {
+    "workflow_id": "workflow-1778515607073-ltrc0k",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T16:06:47.082Z",
+    "last_prompt_id": "183db793-86d1-4f67-9ffd-f0e523590530"
+  },
+  "workflow-1778516027132-neqtsv": {
+    "workflow_id": "workflow-1778516027132-neqtsv",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T16:13:47.149Z",
+    "last_prompt_id": "5a8b9d0b-3ff7-4ead-a0d9-5d31cebce3fe"
+  },
+  "workflow-1778516563496-2j3g7ia": {
+    "workflow_id": "workflow-1778516563496-2j3g7ia",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T16:22:43.505Z",
+    "last_prompt_id": "7eff3239-3ee5-42ef-8fee-14b0b67c6f42"
+  },
+  "workflow-1778516988805-hxr4wh": {
+    "workflow_id": "workflow-1778516988805-hxr4wh",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T16:29:49.173Z",
+    "last_prompt_id": "74ce061e-c346-4108-94e2-88ac0998d559"
+  },
+  "workflow-1778518139581-nola5": {
+    "workflow_id": "workflow-1778518139581-nola5",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T16:48:59.598Z",
+    "last_prompt_id": "5eebc85e-4f42-4e6e-a0c8-397bdf75ffbc"
+  },
+  "workflow-1778518191087-ejy45": {
+    "workflow_id": "workflow-1778518191087-ejy45",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T16:49:51.101Z",
+    "last_prompt_id": "d6930a21-0753-4829-af28-524201fd28ea"
+  },
+  "workflow-1778518652668-jipj9": {
+    "workflow_id": "workflow-1778518652668-jipj9",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-11T16:57:32.683Z",
+    "last_prompt_id": "2670a1fc-25b6-4cf5-bfaf-baec4527c2ad"
+  },
+  "workflow-1778596830639-lc9lfg": {
+    "workflow_id": "workflow-1778596830639-lc9lfg",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-12T14:40:30.647Z",
+    "last_prompt_id": "a5923a99-05aa-4029-a130-9e2022192614"
+  },
+  "workflow-1778603216419-s3ekki": {
+    "workflow_id": "workflow-1778603216419-s3ekki",
+    "total_runs": 1,
+    "success_submits": 1,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-12T16:26:56.439Z",
+    "last_prompt_id": "369b36dc-6eed-4fe5-8acc-6d5abdca9fb3"
+  },
+  "C16-短剧文生图专用-支持场景-角色": {
+    "workflow_id": "C16-短剧文生图专用-支持场景-角色",
+    "total_runs": 2,
+    "success_submits": 2,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-13T03:28:14.111Z",
+    "last_prompt_id": "dc47aa9e-1cd0-4287-a753-6fbfec8b1a0a"
+  },
+  "D18-Flux2Klein9b-5参考图版": {
+    "workflow_id": "D18-Flux2Klein9b-5参考图版",
+    "total_runs": 6,
+    "success_submits": 6,
+    "failed_submits": 0,
+    "last_run_at": "2026-05-14T08:41:10.964Z",
+    "last_prompt_id": "adcf4d95-56dd-4d86-a56a-0347b06bd645"
+  }
+}

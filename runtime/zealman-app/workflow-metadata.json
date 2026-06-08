@@ -1,0 +1,91 @@
+{
+  "A01-文生图-Qwen2512高清放大": {
+    "kind": "image",
+    "color": "lime",
+    "pinned": true
+  },
+  "D20-RAW画质重建Adonis_Workflow": {
+    "kind": "image",
+    "color": "lime",
+    "pinned": true
+  },
+  "A08-洗图-Qwen二次元转真人高清放大": {
+    "kind": "image",
+    "color": "lime"
+  },
+  "B13-千问角色一键多角度_multiple_character_angles-v1.0": {
+    "kind": "image",
+    "color": "lime"
+  },
+  "C07-文生图-Zimage-Nunchaku加速": {
+    "kind": "image",
+    "color": "lime"
+  },
+  "C16-短剧文生图专用-支持场景-角色": {
+    "kind": "image",
+    "color": "lime"
+  },
+  "D14-分镜-Flux克莱因9B多角度多场景": {
+    "kind": "image",
+    "color": "auto"
+  },
+  "G01-图生视频-Wan2.2万相基础版": {
+    "color": "lavender",
+    "kind": "video"
+  },
+  "G02-首尾帧-Wan2.2首尾帧视频": {
+    "kind": "video",
+    "color": "lavender"
+  },
+  "G03-图生视频-Wan2.2SmoothMix": {
+    "color": "lavender",
+    "kind": "video"
+  },
+  "G07-图生视频-Wan2.2+LightX2V-WorkFisher": {
+    "color": "lavender",
+    "kind": "video"
+  },
+  "G10-图生视频-Wan2.2SmoothMixV2": {
+    "color": "lavender",
+    "kind": "video"
+  },
+  "H17-文图生视频-LTX2.3全面优化版": {
+    "color": "lavender",
+    "kind": "video"
+  },
+  "H28-LTX2.3-高动态图生视频": {
+    "color": "lavender",
+    "kind": "video"
+  },
+  "H31-ltx2.3声音-图像生成视频": {
+    "color": "lavender",
+    "kind": "video"
+  },
+  "J11-LTX2.3高清超自然电商数字人": {
+    "kind": "digital_human",
+    "color": "cream"
+  },
+  "N2-单人声音克隆FishAudio S2pro": {
+    "kind": "audio"
+  },
+  "P02-动作迁移-Wan2.2Animate角色迁移": {
+    "color": "cream",
+    "kind": "digital_human"
+  },
+  "P07-动作迁移-Wan2.2AnimateV4": {
+    "color": "cream",
+    "kind": "digital_human"
+  },
+  "Y08-四宫格-LTX-2.3图生视频优化版": {
+    "kind": "video",
+    "color": "lavender"
+  },
+  "D18-Flux2Klein9b-5参考图版": {
+    "color": "lime",
+    "kind": "image"
+  },
+  "P17-动作迁移4090-48G显卡专用V8": {
+    "color": "lavender",
+    "kind": "video"
+  }
+}

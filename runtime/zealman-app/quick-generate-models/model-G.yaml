@@ -1,0 +1,32 @@
+diffusion_models:
+- id: wan2_2_animate_14b_fp8_scaled_e4m3fn_kj_v2
+  type: diffusion_models
+  displayName: Wan2_2-Animate-14B_fp8_scaled_e4m3fn_KJ_v2.safetensors
+  fileName: Wan2_2-Animate-14B_fp8_scaled_e4m3fn_KJ_v2.safetensors
+  downloadUrl: nahz202/Wan_2.2_Repackaged/Wan2_2-Animate-14B_fp8_scaled_e4m3fn_KJ_v2.safetensors
+  subfolder: Wan
+  size: 16.00GB
+text_encoders:
+- id: umt5_xxl_enc_fp8_e4m3fn
+  type: text_encoders
+  displayName: umt5-xxl-enc-fp8_e4m3fn.safetensors
+  fileName: umt5-xxl-enc-fp8_e4m3fn.safetensors
+  downloadUrl: zealman/Wan_2.2/umt5-xxl-enc-fp8_e4m3fn.safetensors
+  size: 6.30GB
+loras:
+- id: wan21_pusav1_lora_14b_rank512_bf16
+  type: loras
+  displayName: Wan21-PusaV1-LoRA-14B-rank512-bf16.safetensors
+  fileName: Wan21-PusaV1-LoRA-14B-rank512-bf16.safetensors
+  downloadUrl: zealman/Wan22-Animate/Wan21-PusaV1-LoRA-14B-rank512-bf16.safetensors
+  subfolder: Wan
+  size: 4.60GB
+combinations:
+- id: combo_group_g
+  name: Wan 2.2 Animate角色迁移V2组合
+  subtitle: 同本镜像内Comfyui工作流中的34号工作流，强制帧率为24，720P长度10秒,640P长度20秒测试正常可跑
+  group: G
+  modelIds:
+  - wan2_2_animate_14b_fp8_scaled_e4m3fn_kj_v2
+  - umt5_xxl_enc_fp8_e4m3fn
+  - wan21_pusav1_lora_14b_rank512_bf16

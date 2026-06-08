@@ -1,0 +1,17 @@
+# wan2.2 图生视频模型配置
+name: Wan22-Animate视频替换角色，保留动作，表情，镜头运动
+subtitle: 你需要下载下面模型才能开始，Comfyui左侧工作流菜单内有配套工作流
+group: modelgobg
+totalSize: 22.40
+
+models:
+  - name: Wan2.2-Animate-14B-fp8_v2.safetensors
+    displayName: Wan22-Animate视频模型 (16.13GB)
+    path: zealman/Wan22-Animate/Wan2.2-Animate-14B-fp8_v2.safetensors
+    size: 16.13
+    type: diffusion_models
+  - name: umt5-xxl-enc-fp8_e4m3fn.safetensors
+    displayName: umt5-xxl-enc-fp8_e4m3fn (6.27GB)
+    path: zealman/Wan_2.2/umt5-xxl-enc-fp8_e4m3fn.safetensors
+    size: 6.27
+    type: text_encoders

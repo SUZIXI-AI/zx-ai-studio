@@ -1,0 +1,49 @@
+{
+  "1": {
+    "inputs": {
+      "images": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "2": {
+    "inputs": {
+      "prompt": "刘亦菲在晒太阳",
+      "width": 1280,
+      "height": 448,
+      "steps": 4,
+      "seed": 61405047997865,
+      "guidance_scale": 0,
+      "negative_prompt": "",
+      "true_cfg_scale": 1,
+      "pipeline": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "QuantFuncGenerate",
+    "_meta": {
+      "title": "QuantFunc Generate"
+    }
+  },
+  "3": {
+    "inputs": {
+      "model_dir": "D:\\ComfyUI_windows_portable\\z-image-series-50x-below-base-model",
+      "transformer_path": "D:\\ComfyUI_windows_portable\\z-image-turbo-50x-below-lighting.safetensors",
+      "model_backend": "lighting",
+      "device": "0: NVIDIA GeForce RTX 4080",
+      "api_key": "",
+      "scheduler_config": "",
+      "manual_unload_model": false
+    },
+    "class_type": "QuantFuncModelLoader",
+    "_meta": {
+      "title": "QuantFunc Model Loader"
+    }
+  }
+}

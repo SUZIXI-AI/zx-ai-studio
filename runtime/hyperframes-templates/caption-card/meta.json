@@ -1,0 +1,29 @@
+{
+  "id": "caption-card",
+  "name": "字幕卡片",
+  "description": "适合口播金句、课程摘要、知识点拆解和短句节奏卡。建议做成高可读的大字卡片：强标题、底部安全字幕条、关键词高亮、节奏切换和精致背景，避免纯文字白板。",
+  "duration_options": [
+    5,
+    12,
+    30,
+    60
+  ],
+  "aspect_options": [
+    "9:16",
+    "16:9",
+    "1:1"
+  ],
+  "fields": [
+    {
+      "key": "title",
+      "label": "主字幕",
+      "type": "text",
+      "required": true
+    },
+    {
+      "key": "body",
+      "label": "补充说明",
+      "type": "textarea"
+    }
+  ]
+}

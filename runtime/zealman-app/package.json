@@ -1,0 +1,45 @@
+{
+  "name": "zealman-autodl-app",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build-frontend": "bash scripts/build-frontend-only.sh",
+    "deploy": "bash scripts/build-and-sync.sh",
+    "deploy-test": "bash scripts/build-and-sync-test.sh",
+    "create-prod": "bash scripts/create-production.sh",
+    "create-full-prod": "bash scripts/create-full-production.sh",
+    "obfuscate": "javascript-obfuscator server.js --config obfuscator-config.json --output server-obfuscated.js",
+    "obfuscate-backup": "cp server.js server.js.backup && npm run obfuscate",
+    "restore": "cp server.js.backup server.js",
+    "sync-zealman-app": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Sync-DevToZealmanApp.ps1",
+    "migrate:studio-script-v2": "node scripts/migrate-studio-script-v2.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.8",
+    "javascript-obfuscator": "^4.1.1",
+    "terser": "^5.44.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "@types/three": "^0.182.0",
+    "cors": "^2.8.5",
+    "eventsource": "^4.0.0",
+    "express": "^4.21.2",
+    "http-proxy-middleware": "^3.0.5",
+    "multer": "^1.4.5-lts.2",
+    "ogl": "^1.0.11",
+    "postprocessing": "^6.38.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-window": "^2.2.1",
+    "tailwindcss": "^4.1.14",
+    "three": "^0.182.0",
+    "yaml": "^2.8.1"
+  }
+}
