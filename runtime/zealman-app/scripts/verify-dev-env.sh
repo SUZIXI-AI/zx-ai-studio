@@ -1,13 +1,13 @@
 #!/bin/bash
 # 验证开发环境脚本
-# 用于验证开发环境（/root/autodl-fs/zealman-autodl-app/）是否正常配置
+# 用于验证开发环境是否正常配置
 
 echo "=========================================="
 echo "开发环境验证脚本"
 echo "=========================================="
 echo ""
 
-DEV_DIR="/root/autodl-fs/zealman-autodl-app"
+DEV_DIR="${ZX_AI_STUDIO_DEV_DIR:-/root/zx-ai-studio-dev}"
 ERRORS=0
 WARNINGS=0
 
@@ -203,4 +203,3 @@ if [ ${#MISSING_PERMISSIONS[@]} -gt 0 ]; then
 fi
 
 exit $STATUS
-

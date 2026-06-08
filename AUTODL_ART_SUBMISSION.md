@@ -6,20 +6,13 @@
 ZX AI Studio
 ```
 
-不要使用这些容易被误判为搬运的名称：
-
-```text
-ZX-AI-Comfy-UI-v2
-ComfyUI 镜像
-ComfyUI 应用
-ComfyUI 整合包
-```
+发布页、镜像名称、仓库名称和简介都统一使用 `ZX AI Studio`。
 
 ## 应用定位
 
 自研 AI 创作工作台。
 
-ComfyUI 只描述为本地工作流执行引擎，不作为应用主体宣传。
+本地工作流引擎只作为运行能力的一部分说明，不作为应用名称或主体卖点。
 
 ## 启动命令
 
@@ -36,7 +29,7 @@ bash /root/zealman-app/scripts/autodl-start.sh
 ## 其他服务端口
 
 ```text
-6006 ComfyUI 执行引擎
+6006 本地工作流执行引擎
 6010 一键成片 API
 ```
 
@@ -55,8 +48,7 @@ ZX AI Studio 是自研 AI 创作工作台。它提供网页控制台、工作流
 ## 审核前检查
 
 - 使用 AutoDL 官方基础镜像重新制作，不从其他 AI 应用镜像二次发布。
-- 名称和介绍突出 `ZX AI Studio`，不要把应用命名为 ComfyUI。
+- 名称、标题和介绍都突出 `ZX AI Studio`。
 - 镜像内不要包含 API Key、测试作品、渲染视频和临时日志。
 - `/root/zealman-app/scripts/autodl-start.sh` 能启动 6008、6006、6010。
 - 打开 6008 后能进入你的网站首页。
-

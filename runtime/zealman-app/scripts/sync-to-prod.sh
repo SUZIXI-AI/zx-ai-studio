@@ -1,7 +1,7 @@
 #!/bin/bash
 # 从开发环境同步文件到生产环境的脚本（单向更新）
 
-DEV_DIR="/root/autodl-fs/zealman-autodl-app"
+DEV_DIR="${ZX_AI_STUDIO_DEV_DIR:-/root/zx-ai-studio-dev}"
 PROD_DIR="/root/zealman-app"
 
 # 混淆工具路径
@@ -179,10 +179,10 @@ if [ -f "$DEV_DIR/scripts/verify-prod-env.sh" ]; then
 fi
 
 
-if [ -f "$DEV_DIR/scripts/zealman-autodl.service" ]; then
-    echo "同步 zealman-autodl.service..."
+if [ -f "$DEV_DIR/scripts/zx-ai-studio.service" ]; then
+    echo "同步 zx-ai-studio.service..."
     # 注意：自动转换 Windows 行尾符（CRLF）为 Unix 行尾符（LF）
-    sed 's/\r$//' "$DEV_DIR/scripts/zealman-autodl.service" > "$PROD_DIR/scripts/zealman-autodl.service"
+    sed 's/\r$//' "$DEV_DIR/scripts/zx-ai-studio.service" > "$PROD_DIR/scripts/zx-ai-studio.service"
 fi
 
 # 同步其他生产环境脚本

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Zealman-AutoDL 专用开机自启配置脚本
+# ZX AI Studio 专用开机自启配置脚本
 # 针对AutoDL容器环境(无cron/systemd)优化
 # 使用容器启动钩子实现真正的开机自启
 
@@ -50,7 +50,7 @@ setup_rc_local() {
 # 等待系统就绪
 sleep 5
 
-# 启动Zealman-AutoDL服务
+# 启动 ZX AI Studio 服务
 if [ -f /root/zealman-app/scripts/improved-autostart.sh ]; then
     nohup bash /root/zealman-app/scripts/improved-autostart.sh > /tmp/zealman-rc-local.log 2>&1 &
 fi
@@ -67,7 +67,7 @@ EOF
             # 在exit 0之前添加启动命令
             print_message $BLUE "   添加启动命令到 /etc/rc.local..."
             sed -i '/^exit 0/i \
-# 启动Zealman-AutoDL服务\
+# 启动 ZX AI Studio 服务\
 if [ -f /root/zealman-app/scripts/improved-autostart.sh ]; then\
     nohup bash /root/zealman-app/scripts/improved-autostart.sh > /tmp/zealman-rc-local.log 2>&1 &\
 fi\
@@ -88,7 +88,7 @@ setup_profile_d() {
     # 创建profile.d脚本
     cat > /etc/profile.d/zealman-autostart.sh << 'EOF'
 #!/bin/bash
-# Zealman-AutoDL 自动启动脚本
+# ZX AI Studio 自动启动脚本
 # 在所有用户登录时执行
 
 if [ -f /root/zealman-app/scripts/improved-autostart.sh ]; then
@@ -113,7 +113,7 @@ check_bashrc() {
         print_message $YELLOW "⚠️  .bashrc 未配置,正在添加..."
         cat >> /root/.bashrc << 'EOF'
 
-# ==================== Zealman-AutoDL 自动启动 ====================
+# ==================== ZX AI Studio 自动启动 ====================
 if [ -f "/root/zealman-app/scripts/improved-autostart.sh" ]; then
     nohup bash /root/zealman-app/scripts/improved-autostart.sh > /tmp/zealman-bashrc.log 2>&1 &
 fi
@@ -133,7 +133,7 @@ check_profile() {
         print_message $YELLOW "⚠️  .profile 未配置,正在添加..."
         cat >> /root/.profile << 'EOF'
 
-# ==================== Zealman-AutoDL 自动启动 ====================
+# ==================== ZX AI Studio 自动启动 ====================
 if [ -f "/root/zealman-app/scripts/improved-autostart.sh" ]; then
     nohup bash /root/zealman-app/scripts/improved-autostart.sh > /tmp/zealman-profile.log 2>&1 &
 fi
@@ -149,7 +149,7 @@ create_daemon() {
     
     cat > /root/zealman-app/scripts/daemon.sh << 'EOF'
 #!/bin/bash
-# Zealman-AutoDL 后台守护进程
+# ZX AI Studio 后台守护进程
 # 持续监控服务状态,自动重启
 
 LOG_FILE="/tmp/zealman-daemon.log"
@@ -206,7 +206,7 @@ setup_daemon_autostart() {
     # 在rc.local中添加守护进程启动
     if ! grep -q "daemon.sh" /etc/rc.local 2>/dev/null; then
         sed -i '/^exit 0/i \
-# 启动Zealman-AutoDL守护进程\
+# 启动 ZX AI Studio 守护进程\
 if [ -f /root/zealman-app/scripts/daemon.sh ]; then\
     nohup bash /root/zealman-app/scripts/daemon.sh > /dev/null 2>&1 &\
 fi\
@@ -223,10 +223,10 @@ create_check_script() {
     
     cat > /root/zealman-app/scripts/check-service.sh << 'EOF'
 #!/bin/bash
-# 检查 Zealman-AutoDL 服务状态
+# 检查 ZX AI Studio 服务状态
 
 echo "=========================================="
-echo "Zealman-AutoDL 服务状态检查"
+echo "ZX AI Studio 服务状态检查"
 echo "=========================================="
 echo ""
 
@@ -389,4 +389,3 @@ main() {
 
 # 执行主函数
 main "$@"
-

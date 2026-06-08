@@ -1,5 +1,5 @@
 [Unit]
-Description=Zealman-AutoDL Service
+Description=ZX AI Studio Service
 After=network.target
 Wants=network.target
 

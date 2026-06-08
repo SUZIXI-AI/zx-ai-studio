@@ -4,7 +4,7 @@
 # 用法: ./start-services.sh [--force-build|-f]
 # --force-build 或 -f: 强制重新构建前端文件，忽略时间戳检查
 
-echo "启动 zealman-autodl TSX 界面服务..."
+echo "启动 ZX AI Studio 界面服务..."
 
 # ==================== 环境检查阶段 ====================
 echo "🔍 开始环境检查..."
@@ -225,9 +225,9 @@ if [ $attempts -eq $max_attempts ]; then
 fi
 
 # 生产环境不再需要更新开始页面外网地址
-# if [ -f "/root/autodl-fs/zealman-autodl-app/scripts/update-start-html.sh" ]; then
-#     chmod +x /root/autodl-fs/zealman-autodl-app/scripts/update-start-html.sh
-#     bash /root/autodl-fs/zealman-autodl-app/scripts/update-start-html.sh
+# if [ -f "/root/zx-ai-studio-dev/scripts/update-start-html.sh" ]; then
+#     chmod +x /root/zx-ai-studio-dev/scripts/update-start-html.sh
+#     bash /root/zx-ai-studio-dev/scripts/update-start-html.sh
 # fi
 
 echo ""

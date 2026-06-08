@@ -1,5 +1,5 @@
 #!/bin/bash
-# Zealman-AutoDL 开机自动启动脚本（优化版）
+# ZX AI Studio 开机自动启动脚本（优化版）
 # 针对开机冷启动场景精简，跳过不必要的版本检查和进程清理
 
 set -e

@@ -1,8 +1,8 @@
 #!/bin/bash
-# 检查 Zealman-AutoDL 服务状态
+# 检查 ZX AI Studio 服务状态
 
 echo "=========================================="
-echo "Zealman-AutoDL 服务状态检查"
+echo "ZX AI Studio 服务状态检查"
 echo "=========================================="
 echo ""
 
